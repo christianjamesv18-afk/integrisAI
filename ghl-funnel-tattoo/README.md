@@ -24,14 +24,13 @@ For each file, in order:
 2. Add a **1-column Row**. Set it to full width with padding 0 as well.
 3. Drag in a **Custom JS/HTML** element and paste the **entire** file contents into it.
 
-## Things to fill in
+## One thing to fill in
 
 Your GHL booking calendar (links.newwavemedical.net) is already embedded in `02-voucher.html`.
 
-The treatment video (hosted in GHL's Media Library) is already in `04-video.html`.
+The treatment video (hosted in GHL's Media Library) is already in `04-video.html`, and the 2 treatment photos are built into `05-about.html`.
 
-1. **Photos** (`05-about.html`): replace each `PHOTO PLACEHOLDER` line with `<img src="YOUR-IMAGE-URL" alt="Laser tattoo removal treatment">`. Upload the photos to GHL's Media Library to get their URLs. They fill the rounded frame on their own.
-2. **Privacy Policy link** (`09-footer.html`): change `href="#"` to your policy page URL.
+1. **Privacy Policy link** (`09-footer.html`): change `href="#"` to your policy page URL.
 
 All the "Book My $49 Visit" buttons scroll to the booking section (`#nwm-book`), so keep section 2 on the same page.
 
