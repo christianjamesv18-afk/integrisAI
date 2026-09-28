@@ -1,32 +1,69 @@
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<script>(function(d){if(d.className.indexOf('nwm-js')<0&&('IntersectionObserver' in window)&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' nwm-js';setTimeout(function(){d.className+=' nwm-anim-fallback';},3000);}})(document.documentElement);</script>
 <style>
 html,body{overflow-x:hidden;}
-.nwm-hero{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;padding:72px 20px 64px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
+.nwm-hero{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;overflow:hidden;padding:72px 20px 64px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
 .nwm-hero *{box-sizing:border-box;}
 .nwm-hero .nwm-hero-inner{max-width:880px;margin:0 auto;}
 .nwm-hero .nwm-hero-eyebrow{display:inline-block;margin:0 0 22px;padding:8px 16px;border-radius:999px;background-color:#1F274D;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
 .nwm-hero .nwm-hero-title{margin:0 0 18px;font-family:'Lora',Georgia,serif;font-size:56px;font-weight:700;line-height:1.1;color:#ffffff;}
-.nwm-hero .nwm-hero-title span{color:#1F274D;}
+.nwm-hero .nwm-hero-title .nwm-dark{color:#1F274D;}
 .nwm-hero .nwm-hero-sub{max-width:680px;margin:0 auto 30px;font-family:'Inter',Arial,sans-serif;font-size:20px;line-height:1.6;color:#ffffff;}
 .nwm-hero .nwm-hero-facts{margin:0 0 34px;padding:0;list-style:none;text-align:center;}
 .nwm-hero .nwm-hero-facts li{display:inline-block;margin:5px;padding:9px 16px;border:1px solid rgba(255,255,255,0.45);border-radius:999px;background-color:rgba(255,255,255,0.12);font-family:'Inter',Arial,sans-serif;font-size:15px;font-weight:500;color:#ffffff;}
-.nwm-hero .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);}
-.nwm-hero .nwm-btn:hover{background-color:#FFCB33;}
+.nwm-hero .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease;}
+.nwm-hero .nwm-btn:hover{background-color:#FFCB33;transform:translateY(-3px);box-shadow:0 16px 30px rgba(31,39,77,0.32);}
 .nwm-hero .nwm-hero-note{margin:16px 0 0;font-family:'Inter',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.85);}
 @media (max-width:900px){.nwm-hero .nwm-hero-title{font-size:44px;}}
 @media (max-width:600px){.nwm-hero{padding:48px 16px 44px;}.nwm-hero .nwm-hero-title{font-size:34px;}.nwm-hero .nwm-hero-sub{font-size:17px;}.nwm-hero .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
+@keyframes nwm-pulse{0%{box-shadow:0 10px 24px rgba(31,39,77,0.28),0 0 0 0 rgba(253,190,11,0.6);}70%{box-shadow:0 10px 24px rgba(31,39,77,0.28),0 0 0 16px rgba(253,190,11,0);}100%{box-shadow:0 10px 24px rgba(31,39,77,0.28),0 0 0 0 rgba(253,190,11,0);}}
+@media (prefers-reduced-motion:no-preference){.nwm-hero .nwm-pulse{animation:nwm-pulse 2.4s ease-out 2s infinite;}.nwm-hero .nwm-pulse:hover{animation:none;}}
+.nwm-js .nwm-anim:not(.nwm-anim-ready){opacity:0;}
+html.nwm-anim-fallback .nwm-anim:not(.nwm-anim-ready){opacity:1;}
+html.nwm-anim-off .nwm-anim,html.nwm-anim-off .nwm-anim .nwm-w{opacity:1 !important;transform:none !important;}
+.nwm-anim-ready{opacity:0;transform:translateY(32px);}
+.nwm-anim-armed{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim-ready.nwm-a-left{transform:translateX(-48px);}
+.nwm-anim-ready.nwm-a-right{transform:translateX(48px);}
+.nwm-anim-ready.nwm-a-pop{transform:scale(.88);}
+.nwm-anim-ready.nwm-a-fade{transform:none;}
+.nwm-anim-ready.nwm-split{opacity:1;transform:none;}
+.nwm-split .nwm-w{display:inline-block;}
+.nwm-anim-ready.nwm-split .nwm-w{opacity:0;transform:translateY(.55em);}
+.nwm-anim-armed.nwm-split .nwm-w{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim.nwm-anim-ready.nwm-in{opacity:1;transform:none;}
+.nwm-anim.nwm-anim-ready.nwm-in .nwm-w{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.nwm-anim-ready,.nwm-anim-ready .nwm-w{opacity:1 !important;transform:none !important;transition:none !important;}}
 </style>
 <div class="nwm-hero">
 <div class="nwm-hero-inner">
-<p class="nwm-hero-eyebrow">Limited-Time New Patient Offer</p>
-<h1 class="nwm-hero-title">The <span>$49</span> Spinal Decompression Special</h1>
-<p class="nwm-hero-sub">Find out what's really causing your back or neck pain. Your visit includes a full consultation, exam, and your first spinal decompression session, all for $49.</p>
+<p class="nwm-hero-eyebrow nwm-anim nwm-a-pop">Limited-Time New Patient Offer</p>
+<h1 class="nwm-hero-title nwm-anim nwm-split" data-nwm-delay="150">The <span class="nwm-dark">$49</span> Spinal Decompression Special</h1>
+<p class="nwm-hero-sub nwm-anim" data-nwm-delay="550">Find out what's really causing your back or neck pain. Your visit includes a full consultation, exam, and your first spinal decompression session, all for $49.</p>
 <ul class="nwm-hero-facts">
-<li>6 services included</li>
-<li>Non-surgical</li>
-<li>Riverview, FL</li>
+<li class="nwm-anim nwm-a-pop" data-nwm-delay="700">6 services included</li>
+<li class="nwm-anim nwm-a-pop" data-nwm-delay="800">Non-surgical</li>
+<li class="nwm-anim nwm-a-pop" data-nwm-delay="900">Riverview, FL</li>
 </ul>
-<a class="nwm-btn" href="#nwm-book">Choose My Appointment Time &rarr;</a>
-<p class="nwm-hero-note">This promotional price is available for a limited time.</p>
+<div class="nwm-anim" data-nwm-delay="1000"><a class="nwm-btn nwm-pulse" href="#nwm-book">Choose My Appointment Time &rarr;</a></div>
+<p class="nwm-hero-note nwm-anim nwm-a-fade" data-nwm-delay="1150">This promotional price is available for a limited time.</p>
 </div>
 </div>
+<script>
+(function(){
+function split(el,base){var kids=[].slice.call(el.childNodes),n=0;el.textContent='';kids.forEach(function(k){if(k.nodeType===3){k.nodeValue.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){el.appendChild(document.createTextNode(' '));}else{var s=document.createElement('span');s.className='nwm-w';s.textContent=p;s.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(s);}});}else if(k.nodeType===1){k.className+=' nwm-w';k.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(k);}});}
+function run(){try{
+var els=document.querySelectorAll('.nwm-anim:not(.nwm-anim-ready)');
+if(!els.length||!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var wide=window.innerWidth>600;
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('nwm-in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+for(var i=0;i<els.length;i++){var el=els[i];var d=parseInt(el.getAttribute('data-nwm-delay')||'0',10);var dw=el.getAttribute('data-nwm-delay-wide');if(dw&&wide)d=parseInt(dw,10);
+el.setAttribute('data-nwm-d',d);if(el.classList.contains('nwm-split'))split(el,d);
+el.classList.add('nwm-anim-ready');}
+for(var k=0;k<els.length;k++){void getComputedStyle(els[k]).opacity;}
+for(var j=0;j<els.length;j++){var dj=els[j].getAttribute('data-nwm-d');if(dj&&dj!=='0'&&!els[j].classList.contains('nwm-split'))els[j].style.transitionDelay=dj+'ms';els[j].classList.add('nwm-anim-armed');io.observe(els[j]);}
+}catch(err){document.documentElement.className+=' nwm-anim-off';}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">

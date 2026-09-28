@@ -1,7 +1,7 @@
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<script>(function(d){if(d.className.indexOf('nwm-js')<0&&('IntersectionObserver' in window)&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' nwm-js';setTimeout(function(){d.className+=' nwm-anim-fallback';},3000);}})(document.documentElement);</script>
 <style>
 html,body{overflow-x:hidden;}
-.nwm-inc{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;padding:72px 20px;background-color:#ffffff;font-family:'Inter',Arial,sans-serif;color:#1c2233;}
+.nwm-inc{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;overflow:hidden;padding:72px 20px;background-color:#ffffff;font-family:'Inter',Arial,sans-serif;color:#1c2233;}
 .nwm-inc *{box-sizing:border-box;}
 .nwm-inc .nwm-inc-inner{max-width:1140px;margin:0 auto;}
 .nwm-inc .nwm-inc-head{max-width:720px;margin:0 auto 44px;text-align:center;}
@@ -10,32 +10,69 @@ html,body{overflow-x:hidden;}
 .nwm-inc .nwm-inc-sub{margin:0;font-family:'Inter',Arial,sans-serif;font-size:18px;line-height:1.6;color:#5b6478;}
 .nwm-inc .nwm-inc-grid{display:flex;flex-wrap:wrap;margin:0 -10px;padding:0;list-style:none;}
 .nwm-inc .nwm-inc-cell{width:33.333%;padding:10px;}
-.nwm-inc .nwm-inc-item{height:100%;padding:28px 26px 26px;border:1px solid #e3edf5;border-top:4px solid #009CE7;border-radius:16px;background-color:#F7FBFE;}
-.nwm-inc .nwm-inc-num{display:inline-block;width:40px;height:40px;margin-bottom:16px;border-radius:12px;background-color:#1F274D;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:700;line-height:40px;text-align:center;}
+.nwm-inc .nwm-inc-item{height:100%;padding:28px 26px 26px;border:1px solid #e3edf5;border-top:4px solid #009CE7;border-radius:16px;background-color:#F7FBFE;transition:transform .3s ease,box-shadow .3s ease;}
+.nwm-inc .nwm-inc-num{display:inline-block;width:40px;height:40px;margin-bottom:16px;border-radius:12px;background-color:#1F274D;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:700;line-height:40px;text-align:center;transition:background-color .3s ease;}
 .nwm-inc .nwm-inc-item h3{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:21px;font-weight:700;line-height:1.3;color:#1F274D;}
 .nwm-inc .nwm-inc-item h3 small{font-family:'Inter',Arial,sans-serif;font-size:13px;font-weight:600;color:#5b6478;}
 .nwm-inc .nwm-inc-item p{margin:0;font-family:'Inter',Arial,sans-serif;font-size:16px;line-height:1.6;color:#3d4557;}
 .nwm-inc .nwm-inc-cta{margin-top:44px;text-align:center;}
-.nwm-inc .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.22);}
-.nwm-inc .nwm-btn:hover{background-color:#FFCB33;}
+.nwm-inc .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.22);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease;}
+.nwm-inc .nwm-btn:hover{background-color:#FFCB33;transform:translateY(-3px);box-shadow:0 16px 30px rgba(31,39,77,0.32);}
 @media (max-width:960px){.nwm-inc .nwm-inc-cell{width:50%;}.nwm-inc .nwm-inc-title{font-size:38px;}}
 @media (max-width:600px){.nwm-inc{padding:52px 16px;}.nwm-inc .nwm-inc-head{margin-bottom:30px;}.nwm-inc .nwm-inc-title{font-size:30px;}.nwm-inc .nwm-inc-sub{font-size:17px;}.nwm-inc .nwm-inc-cell{width:100%;padding:7px 10px;}.nwm-inc .nwm-inc-item{padding:22px 20px;}.nwm-inc .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
+.nwm-inc .nwm-inc-item:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(12,93,156,0.14);}
+.nwm-inc .nwm-inc-item:hover .nwm-inc-num{background-color:#009CE7;}
+.nwm-js .nwm-anim:not(.nwm-anim-ready){opacity:0;}
+html.nwm-anim-fallback .nwm-anim:not(.nwm-anim-ready){opacity:1;}
+html.nwm-anim-off .nwm-anim,html.nwm-anim-off .nwm-anim .nwm-w{opacity:1 !important;transform:none !important;}
+.nwm-anim-ready{opacity:0;transform:translateY(32px);}
+.nwm-anim-armed{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim-ready.nwm-a-left{transform:translateX(-48px);}
+.nwm-anim-ready.nwm-a-right{transform:translateX(48px);}
+.nwm-anim-ready.nwm-a-pop{transform:scale(.88);}
+.nwm-anim-ready.nwm-a-fade{transform:none;}
+.nwm-anim-ready.nwm-split{opacity:1;transform:none;}
+.nwm-split .nwm-w{display:inline-block;}
+.nwm-anim-ready.nwm-split .nwm-w{opacity:0;transform:translateY(.55em);}
+.nwm-anim-armed.nwm-split .nwm-w{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim.nwm-anim-ready.nwm-in{opacity:1;transform:none;}
+.nwm-anim.nwm-anim-ready.nwm-in .nwm-w{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.nwm-anim-ready,.nwm-anim-ready .nwm-w{opacity:1 !important;transform:none !important;transition:none !important;}}
 </style>
 <div class="nwm-inc">
 <div class="nwm-inc-inner">
 <div class="nwm-inc-head">
-<p class="nwm-inc-kicker">What's Included</p>
-<h2 class="nwm-inc-title">Everything You Get for $49</h2>
-<p class="nwm-inc-sub">One visit, six steps, so you walk out with real answers and a clear plan for your recovery.</p>
+<p class="nwm-inc-kicker nwm-anim nwm-a-fade">What's Included</p>
+<h2 class="nwm-inc-title nwm-anim nwm-split" data-nwm-delay="100">Everything You Get for $49</h2>
+<p class="nwm-inc-sub nwm-anim" data-nwm-delay="400">One visit, six steps, so you walk out with real answers and a clear plan for your recovery.</p>
 </div>
 <ul class="nwm-inc-grid">
-<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">1</span><h3>Consultation</h3><p>Tell us where it hurts, how long it's been going on, and how it's affecting your daily life. We listen first.</p></div></li>
-<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">2</span><h3>Examination</h3><p>A thorough structural evaluation to pinpoint the imbalances and problem areas behind your symptoms.</p></div></li>
-<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">3</span><h3>Digital X-Rays <small>(if needed)</small></h3><p>Clear images of the affected area so we can see exactly what's going on and choose the right approach.</p></div></li>
-<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">4</span><h3>MRI Review</h3><p>Already had an MRI? We'll explain your results in plain language, walk you through your options, and give you a second opinion.</p></div></li>
-<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">5</span><h3>Doctor's Report of Findings</h3><p>We'll sit down together, explain what's causing your symptoms, and map out a plan to get you back to the life you enjoy.</p></div></li>
-<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">6</span><h3>Spinal Decompression Session</h3><p>Experience one full, non-surgical spinal decompression treatment so you can feel how it works firsthand.</p></div></li>
+<li class="nwm-inc-cell nwm-anim nwm-a-pop" data-nwm-delay-wide="0"><div class="nwm-inc-item"><span class="nwm-inc-num">1</span><h3>Consultation</h3><p>Tell us where it hurts, how long it's been going on, and how it's affecting your daily life. We listen first.</p></div></li>
+<li class="nwm-inc-cell nwm-anim nwm-a-pop" data-nwm-delay-wide="120"><div class="nwm-inc-item"><span class="nwm-inc-num">2</span><h3>Examination</h3><p>A thorough structural evaluation to pinpoint the imbalances and problem areas behind your symptoms.</p></div></li>
+<li class="nwm-inc-cell nwm-anim nwm-a-pop" data-nwm-delay-wide="240"><div class="nwm-inc-item"><span class="nwm-inc-num">3</span><h3>Digital X-Rays <small>(if needed)</small></h3><p>Clear images of the affected area so we can see exactly what's going on and choose the right approach.</p></div></li>
+<li class="nwm-inc-cell nwm-anim nwm-a-pop" data-nwm-delay-wide="0"><div class="nwm-inc-item"><span class="nwm-inc-num">4</span><h3>MRI Review</h3><p>Already had an MRI? We'll explain your results in plain language, walk you through your options, and give you a second opinion.</p></div></li>
+<li class="nwm-inc-cell nwm-anim nwm-a-pop" data-nwm-delay-wide="120"><div class="nwm-inc-item"><span class="nwm-inc-num">5</span><h3>Doctor's Report of Findings</h3><p>We'll sit down together, explain what's causing your symptoms, and map out a plan to get you back to the life you enjoy.</p></div></li>
+<li class="nwm-inc-cell nwm-anim nwm-a-pop" data-nwm-delay-wide="240"><div class="nwm-inc-item"><span class="nwm-inc-num">6</span><h3>Spinal Decompression Session</h3><p>Experience one full, non-surgical spinal decompression treatment so you can feel how it works firsthand.</p></div></li>
 </ul>
-<div class="nwm-inc-cta"><a class="nwm-btn" href="#nwm-book">Claim My $49 Visit &rarr;</a></div>
+<div class="nwm-inc-cta nwm-anim"><a class="nwm-btn" href="#nwm-book">Claim My $49 Visit &rarr;</a></div>
 </div>
 </div>
+<script>
+(function(){
+function split(el,base){var kids=[].slice.call(el.childNodes),n=0;el.textContent='';kids.forEach(function(k){if(k.nodeType===3){k.nodeValue.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){el.appendChild(document.createTextNode(' '));}else{var s=document.createElement('span');s.className='nwm-w';s.textContent=p;s.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(s);}});}else if(k.nodeType===1){k.className+=' nwm-w';k.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(k);}});}
+function run(){try{
+var els=document.querySelectorAll('.nwm-anim:not(.nwm-anim-ready)');
+if(!els.length||!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var wide=window.innerWidth>600;
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('nwm-in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+for(var i=0;i<els.length;i++){var el=els[i];var d=parseInt(el.getAttribute('data-nwm-delay')||'0',10);var dw=el.getAttribute('data-nwm-delay-wide');if(dw&&wide)d=parseInt(dw,10);
+el.setAttribute('data-nwm-d',d);if(el.classList.contains('nwm-split'))split(el,d);
+el.classList.add('nwm-anim-ready');}
+for(var k=0;k<els.length;k++){void getComputedStyle(els[k]).opacity;}
+for(var j=0;j<els.length;j++){var dj=els[j].getAttribute('data-nwm-d');if(dj&&dj!=='0'&&!els[j].classList.contains('nwm-split'))els[j].style.transitionDelay=dj+'ms';els[j].classList.add('nwm-anim-armed');io.observe(els[j]);}
+}catch(err){document.documentElement.className+=' nwm-anim-off';}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">

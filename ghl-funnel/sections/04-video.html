@@ -1,7 +1,7 @@
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<script>(function(d){if(d.className.indexOf('nwm-js')<0&&('IntersectionObserver' in window)&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' nwm-js';setTimeout(function(){d.className+=' nwm-anim-fallback';},3000);}})(document.documentElement);</script>
 <style>
 html,body{overflow-x:hidden;}
-.nwm-vid{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;padding:72px 20px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
+.nwm-vid{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;overflow:hidden;padding:72px 20px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
 .nwm-vid *{box-sizing:border-box;}
 .nwm-vid .nwm-vid-inner{max-width:900px;margin:0 auto;}
 .nwm-vid .nwm-vid-title{margin:0 0 12px;font-family:'Lora',Georgia,serif;font-size:44px;font-weight:700;line-height:1.15;color:#ffffff;}
@@ -12,18 +12,53 @@ html,body{overflow-x:hidden;}
 .nwm-vid .nwm-vid-play{display:block;position:relative;width:72px;height:72px;margin:0 auto 14px;border-radius:50%;background-color:#FDBE0B;}
 .nwm-vid .nwm-vid-play:after{content:"";position:absolute;top:22px;left:28px;width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid #1F274D;}
 .nwm-vid .nwm-vid-cta{margin-top:40px;}
-.nwm-vid .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);}
-.nwm-vid .nwm-btn:hover{background-color:#FFCB33;}
+.nwm-vid .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease;}
+.nwm-vid .nwm-btn:hover{background-color:#FFCB33;transform:translateY(-3px);box-shadow:0 16px 30px rgba(31,39,77,0.32);}
 @media (max-width:900px){.nwm-vid .nwm-vid-title{font-size:38px;}}
 @media (max-width:600px){.nwm-vid{padding:52px 16px;}.nwm-vid .nwm-vid-title{font-size:30px;}.nwm-vid .nwm-vid-sub{font-size:17px;}.nwm-vid .nwm-vid-frame{border-width:4px;border-radius:14px;}.nwm-vid .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
+.nwm-js .nwm-anim:not(.nwm-anim-ready){opacity:0;}
+html.nwm-anim-fallback .nwm-anim:not(.nwm-anim-ready){opacity:1;}
+html.nwm-anim-off .nwm-anim,html.nwm-anim-off .nwm-anim .nwm-w{opacity:1 !important;transform:none !important;}
+.nwm-anim-ready{opacity:0;transform:translateY(32px);}
+.nwm-anim-armed{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim-ready.nwm-a-left{transform:translateX(-48px);}
+.nwm-anim-ready.nwm-a-right{transform:translateX(48px);}
+.nwm-anim-ready.nwm-a-pop{transform:scale(.88);}
+.nwm-anim-ready.nwm-a-fade{transform:none;}
+.nwm-anim-ready.nwm-split{opacity:1;transform:none;}
+.nwm-split .nwm-w{display:inline-block;}
+.nwm-anim-ready.nwm-split .nwm-w{opacity:0;transform:translateY(.55em);}
+.nwm-anim-armed.nwm-split .nwm-w{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim.nwm-anim-ready.nwm-in{opacity:1;transform:none;}
+.nwm-anim.nwm-anim-ready.nwm-in .nwm-w{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.nwm-anim-ready,.nwm-anim-ready .nwm-w{opacity:1 !important;transform:none !important;transition:none !important;}}
 </style>
 <div class="nwm-vid">
 <div class="nwm-vid-inner">
-<h2 class="nwm-vid-title">See Spinal Decompression in Action</h2>
-<p class="nwm-vid-sub">Watch a real treatment session so you know exactly what to expect when you come in.</p>
-<div class="nwm-vid-frame">
+<h2 class="nwm-vid-title nwm-anim nwm-split">See Spinal Decompression in Action</h2>
+<p class="nwm-vid-sub nwm-anim" data-nwm-delay="300">Watch a real treatment session so you know exactly what to expect when you come in.</p>
+<div class="nwm-vid-frame nwm-anim nwm-a-pop" data-nwm-delay="150">
 <div class="nwm-vid-placeholder"><span class="nwm-vid-play"></span>VIDEO PLACEHOLDER: replace this line with your video embed</div>
 </div>
-<div class="nwm-vid-cta"><a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a></div>
+<div class="nwm-vid-cta nwm-anim"><a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a></div>
 </div>
 </div>
+<script>
+(function(){
+function split(el,base){var kids=[].slice.call(el.childNodes),n=0;el.textContent='';kids.forEach(function(k){if(k.nodeType===3){k.nodeValue.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){el.appendChild(document.createTextNode(' '));}else{var s=document.createElement('span');s.className='nwm-w';s.textContent=p;s.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(s);}});}else if(k.nodeType===1){k.className+=' nwm-w';k.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(k);}});}
+function run(){try{
+var els=document.querySelectorAll('.nwm-anim:not(.nwm-anim-ready)');
+if(!els.length||!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var wide=window.innerWidth>600;
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('nwm-in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+for(var i=0;i<els.length;i++){var el=els[i];var d=parseInt(el.getAttribute('data-nwm-delay')||'0',10);var dw=el.getAttribute('data-nwm-delay-wide');if(dw&&wide)d=parseInt(dw,10);
+el.setAttribute('data-nwm-d',d);if(el.classList.contains('nwm-split'))split(el,d);
+el.classList.add('nwm-anim-ready');}
+for(var k=0;k<els.length;k++){void getComputedStyle(els[k]).opacity;}
+for(var j=0;j<els.length;j++){var dj=els[j].getAttribute('data-nwm-d');if(dj&&dj!=='0'&&!els[j].classList.contains('nwm-split'))els[j].style.transitionDelay=dj+'ms';els[j].classList.add('nwm-anim-armed');io.observe(els[j]);}
+}catch(err){document.documentElement.className+=' nwm-anim-off';}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">

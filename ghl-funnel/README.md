@@ -32,3 +32,12 @@ The GHL calendar (Personal booking, 30 min, US/Eastern) is already embedded in `
 That means GHL didn't apply the `<style>` block. Check that each file went into a **Custom JS/HTML** element (not a Text or Paragraph element), that you pasted the **whole** file from the first line to the last, and that you clicked **Save** in the code editor.
 
 All the "Book / Claim" buttons scroll to the booking section (`#nwm-book`), so keep section 2 on the same page.
+
+## Animations
+
+Each section animates by itself; nothing extra to set up.
+
+- **On open:** the hero badge, headline, text, pills and button come in one after another.
+- **On scroll:** headline words rise in one by one, text fades up, the booking cards slide in from the sides, and the service cards and video frame pop in.
+- **On hover:** buttons and service cards lift. The hero button also has a soft pulse.
+- **Safe by default:** content stays fully visible if scripts are blocked, if the animation script errors (it shows everything right away), or if the visitor has "reduce motion" turned on.
