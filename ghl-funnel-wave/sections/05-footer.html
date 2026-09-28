@@ -1,0 +1,58 @@
+<script>(function(d){if(d.className.indexOf('nwm-js')<0&&('IntersectionObserver' in window)&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' nwm-js';setTimeout(function(){d.className+=' nwm-anim-fallback';},3000);}})(document.documentElement);</script>
+<style>
+html,body{overflow-x:hidden;}
+.nwm-foot{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;overflow:hidden;padding:44px 20px 40px;background-color:#252C37;color:rgba(255,255,255,0.8);text-align:center;font-family:'Inter',Arial,sans-serif;font-size:15px;line-height:1.7;}
+.nwm-foot *{box-sizing:border-box;}
+.nwm-foot .nwm-foot-inner{max-width:760px;margin:0 auto;}
+.nwm-foot p{margin:0;font-family:'Inter',Arial,sans-serif;color:rgba(255,255,255,0.8);}
+.nwm-foot .nwm-foot-name{margin:0 0 6px;font-size:18px;font-weight:700;color:#ffffff;}
+.nwm-foot a{color:#3CCAF3 !important;text-decoration:none !important;}
+.nwm-foot a:hover{text-decoration:underline !important;}
+.nwm-foot .nwm-foot-sep{margin:0 8px;opacity:0.5;}
+.nwm-foot .nwm-foot-disclaimer{margin:22px auto 18px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.12);font-size:13px;color:rgba(255,255,255,0.6);}
+.nwm-foot .nwm-foot-legal{font-size:13px;color:rgba(255,255,255,0.6);}
+@media (max-width:600px){.nwm-foot{padding:36px 16px 32px;font-size:14px;}.nwm-foot .nwm-foot-sep{display:none;}.nwm-foot .nwm-foot-addr,.nwm-foot .nwm-foot-tel,.nwm-foot .nwm-foot-legal a{display:block;}}
+.nwm-js .nwm-anim:not(.nwm-anim-ready){opacity:0;}
+html.nwm-anim-fallback .nwm-anim:not(.nwm-anim-ready){opacity:1;}
+html.nwm-anim-off .nwm-anim,html.nwm-anim-off .nwm-anim .nwm-w{opacity:1 !important;transform:none !important;}
+.nwm-anim-ready{opacity:0;transform:translateY(32px);}
+.nwm-anim-armed{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim-ready.nwm-a-left{transform:translateX(-48px);}
+.nwm-anim-ready.nwm-a-right{transform:translateX(48px);}
+.nwm-anim-ready.nwm-a-pop{transform:scale(.88);}
+.nwm-anim-ready.nwm-a-fade{transform:none;}
+.nwm-anim-ready.nwm-split{opacity:1;transform:none;}
+.nwm-split .nwm-w{display:inline-block;}
+.nwm-anim-ready.nwm-split .nwm-w{opacity:0;transform:translateY(.55em);}
+.nwm-anim-armed.nwm-split .nwm-w{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim.nwm-anim-ready.nwm-in{opacity:1;transform:none;}
+.nwm-anim.nwm-anim-ready.nwm-in .nwm-w{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.nwm-anim-ready,.nwm-anim-ready .nwm-w{opacity:1 !important;transform:none !important;transition:none !important;}}
+</style>
+<div class="nwm-foot">
+<div class="nwm-foot-inner nwm-anim nwm-a-fade">
+<p class="nwm-foot-name">NewWave Medical</p>
+<p><span class="nwm-foot-addr">13039 Summerfield Square Drive, Riverview, FL 33578</span><span class="nwm-foot-sep">|</span><a class="nwm-foot-tel" href="tel:+18135749206">(813) 574-9206</a></p>
+<p class="nwm-foot-disclaimer">Disclaimer: Medicare is not accepted and federal insurance rules apply.</p>
+<p class="nwm-foot-legal">&copy; 2026 NewWave Medical. All Rights Reserved.<span class="nwm-foot-sep">|</span><a href="#">Privacy Policy</a></p>
+</div>
+</div>
+<script>
+(function(){
+function split(el,base){var kids=[].slice.call(el.childNodes),n=0;el.textContent='';kids.forEach(function(k){if(k.nodeType===3){k.nodeValue.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){el.appendChild(document.createTextNode(' '));}else{var s=document.createElement('span');s.className='nwm-w';s.textContent=p;s.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(s);}});}else if(k.nodeType===1){k.className+=' nwm-w';k.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(k);}});}
+function run(){try{
+var els=document.querySelectorAll('.nwm-anim:not(.nwm-anim-ready)');
+if(!els.length||!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var wide=window.innerWidth>600;
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('nwm-in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+for(var i=0;i<els.length;i++){var el=els[i];var d=parseInt(el.getAttribute('data-nwm-delay')||'0',10);var dw=el.getAttribute('data-nwm-delay-wide');if(dw&&wide)d=parseInt(dw,10);
+el.setAttribute('data-nwm-d',d);if(el.classList.contains('nwm-split'))split(el,d);
+el.classList.add('nwm-anim-ready');}
+for(var k=0;k<els.length;k++){void getComputedStyle(els[k]).opacity;}
+for(var j=0;j<els.length;j++){var dj=els[j].getAttribute('data-nwm-d');if(dj&&dj!=='0'&&!els[j].classList.contains('nwm-split'))els[j].style.transitionDelay=dj+'ms';els[j].classList.add('nwm-anim-armed');io.observe(els[j]);}
+}catch(err){document.documentElement.className+=' nwm-anim-off';}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
