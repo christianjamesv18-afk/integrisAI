@@ -23,7 +23,7 @@ For each file, in order:
 
 ## One thing to fill in
 
-Your Wave Therapy GHL calendar is already embedded in `02-booking.html` and `02b-calendar-only.html`.
+Your GHL booking calendar (links.newwavemedical.net) is already embedded in `02-booking.html` and `02b-calendar-only.html`.
 
 The treatment video (hosted in GHL's Media Library) is already in `04-video.html`.
 
