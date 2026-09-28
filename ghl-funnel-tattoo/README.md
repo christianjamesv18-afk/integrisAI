@@ -28,10 +28,9 @@ For each file, in order:
 
 Your GHL form ("Laser Tattoo Removal Treatment Special") is already embedded in `02-voucher.html`.
 
-The treatment video (hosted in GHL's Media Library) is already in `04-video.html`.
-
-1. **Photos** (`05-about.html`): replace each `PHOTO PLACEHOLDER` line with `<img src="YOUR-IMAGE-URL" alt="Laser tattoo removal treatment">`. Upload the photos to GHL's Media Library to get their URLs. They fill the rounded frame on their own.
-2. **Privacy Policy link** (`09-footer.html`): change `href="#"` to your policy page URL.
+1. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed.
+2. **Photos** (`05-about.html`): replace each `PHOTO PLACEHOLDER` line with `<img src="YOUR-IMAGE-URL" alt="Laser tattoo removal treatment">`. Upload the photos to GHL's Media Library to get their URLs. They fill the rounded frame on their own.
+3. **Privacy Policy link** (`09-footer.html`): change `href="#"` to your policy page URL.
 
 All the "Claim / Send Me the Voucher" buttons scroll to the voucher section (`#nwm-book`), so keep section 2 on the same page.
 

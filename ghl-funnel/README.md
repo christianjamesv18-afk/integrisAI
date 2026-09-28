@@ -21,12 +21,13 @@ For each file, in order:
 2. Add a **1-column Row**. Set it to full width with padding 0 as well.
 3. Drag in a **Custom JS/HTML** element and paste the **entire** file contents into it.
 
-## Two things to fill in
+## One thing to fill in
 
 The GHL calendar (Personal booking, 30 min, US/Eastern) is already embedded in `02-booking.html`.
 
-1. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed. It fills the 16:9 frame on its own.
-2. **Privacy Policy link** (`05-footer.html`): change `href="#"` to your policy page URL.
+The treatment video (hosted in GHL's Media Library) is already in `04-video.html`.
+
+1. **Privacy Policy link** (`05-footer.html`): change `href="#"` to your policy page URL.
 
 ## If the page shows CSS as plain text
 
