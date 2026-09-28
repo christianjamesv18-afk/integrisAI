@@ -5,7 +5,7 @@ Nine standalone blocks. Each one carries its own styles and animations, so paste
 | # | File | What it is |
 |---|------|------------|
 | 1 | `sections/01-hero.html` | Offer headline, 3 pills and a "Claim My $49 Voucher" button |
-| 2 | `sections/02-voucher.html` | Voucher card (where your GHL form goes) and a "Good to Know" tattoo-size card |
+| 2 | `sections/02-voucher.html` | Voucher card with your GHL form and a "Good to Know" tattoo-size card |
 | 3 | `sections/03-whats-included.html` | The 3 included services and a CTA button |
 | 4 | `sections/04-video.html` | Video frame (empty for now), a Rohrer Spectrum note and a CTA button |
 | 5 | `sections/05-about.html` | "Get Hope, Help & Answers" text, 2 photo slots, Dr. Matthew Wilson and a CTA button |
@@ -26,10 +26,11 @@ For each file, in order:
 
 ## Things to fill in
 
-1. **Form** (`02-voucher.html`): find the line that says `FORM PLACEHOLDER`. Replace that whole `<div class="nwm-book-placeholder">...</div>` line with your GHL form embed code (Sites → Forms → your form → **Integrate** → Embed).
-2. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed.
-3. **Photos** (`05-about.html`): replace each `PHOTO PLACEHOLDER` line with `<img src="YOUR-IMAGE-URL" alt="Laser tattoo removal treatment">`. Upload the photos to GHL's Media Library to get their URLs. They fill the rounded frame on their own.
-4. **Privacy Policy link** (`09-footer.html`): change `href="#"` to your policy page URL.
+Your GHL form ("Laser Tattoo Removal Treatment Special") is already embedded in `02-voucher.html`.
+
+1. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed.
+2. **Photos** (`05-about.html`): replace each `PHOTO PLACEHOLDER` line with `<img src="YOUR-IMAGE-URL" alt="Laser tattoo removal treatment">`. Upload the photos to GHL's Media Library to get their URLs. They fill the rounded frame on their own.
+3. **Privacy Policy link** (`09-footer.html`): change `href="#"` to your policy page URL.
 
 All the "Claim / Send Me the Voucher" buttons scroll to the voucher section (`#nwm-book`), so keep section 2 on the same page.
 
