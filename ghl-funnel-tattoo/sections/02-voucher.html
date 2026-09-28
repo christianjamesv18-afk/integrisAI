@@ -1,0 +1,114 @@
+<script>(function(d){if(d.className.indexOf('nwm-js')<0&&('IntersectionObserver' in window)&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' nwm-js';setTimeout(function(){d.className+=' nwm-anim-fallback';},3000);}})(document.documentElement);</script>
+<style>
+html,body{overflow-x:hidden;}
+.nwm-book{box-sizing:border-box;position:relative;left:50%;width:100vw;max-width:100vw;margin-left:-50vw;overflow:hidden;padding:8px 20px 72px;background-color:#009CE7;font-family:'Inter',Arial,sans-serif;color:#1c2233;}
+.nwm-book *{box-sizing:border-box;}
+
+.nwm-book .nwm-book-grid{display:flex;flex-wrap:wrap;align-items:flex-start;max-width:1140px;margin:0 auto;}
+.nwm-book .nwm-book-main{flex:1 1 560px;min-width:0;margin:0 12px 24px;}
+.nwm-book .nwm-book-side{flex:1 1 340px;min-width:0;margin:0 12px 24px;}
+.nwm-book .nwm-card{background-color:#ffffff;border-radius:20px;box-shadow:0 18px 40px rgba(31,39,77,0.18);overflow:hidden;}
+.nwm-book .nwm-card-body{padding:32px;}
+.nwm-book .nwm-book-title{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;line-height:1.2;color:#1F274D;}
+.nwm-book .nwm-book-lead{margin:0 0 20px;font-size:16px;line-height:1.6;color:#5b6478;}
+.nwm-book .nwm-book-list{margin:0 0 24px;padding:18px 20px 8px;border-radius:14px;background-color:#F1F8FD;list-style:none;}
+.nwm-book .nwm-book-list li{position:relative;margin:0 0 10px;padding-left:28px;font-size:15px;font-weight:500;line-height:1.4;color:#1c2233;}
+.nwm-book .nwm-book-list li:before{content:"\2713";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background-color:#1FA35A;color:#ffffff;font-size:11px;font-weight:700;line-height:18px;text-align:center;}
+.nwm-book .nwm-book-price{margin:0 0 20px;font-size:16px;font-weight:600;color:#1F274D;overflow:hidden;}
+.nwm-book .nwm-book-price strong{float:right;font-family:'Lora',Georgia,serif;font-size:32px;line-height:1;color:#0C5D9C;}
+.nwm-book .nwm-book-form iframe{display:block;width:100%;min-height:520px;border:0;}
+.nwm-book .nwm-book-placeholder{padding:200px 24px;border:2px dashed #b9d9ef;border-radius:14px;background-color:#F7FBFE;color:#5b6478;font-size:15px;text-align:center;}
+.nwm-book .nwm-book-secure{margin:16px 0 0;font-size:13px;color:#5b6478;text-align:center;}
+.nwm-book .nwm-side-head{padding:28px 28px 8px;}
+.nwm-book .nwm-side-title{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:700;color:#1F274D;}
+.nwm-book .nwm-side-text{margin:0;font-size:15px;line-height:1.6;color:#3d4557;}
+.nwm-book .nwm-size{width:100%;margin:0;border-collapse:collapse;font-size:15px;}
+.nwm-book .nwm-size-wrap{padding:10px 28px 4px;}
+.nwm-book .nwm-size th{padding:10px 0;border-bottom:1px solid #e6edf3;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5b6478;text-align:left;}
+.nwm-book .nwm-size td{padding:12px 0;border-bottom:1px solid #eef3f7;color:#1c2233;vertical-align:top;}
+.nwm-book .nwm-size td strong{color:#1F274D;}
+.nwm-book .nwm-size .nwm-inc-yes{color:#1FA35A;font-weight:700;}
+.nwm-book .nwm-size .nwm-inc-extra{color:#5b6478;}
+.nwm-book .nwm-side-call{padding:20px 28px 28px;text-align:center;}
+.nwm-book .nwm-side-call p{margin:0 0 12px;font-size:14px;color:#5b6478;}
+.nwm-book .nwm-loc-phone{display:inline-block;padding:12px 22px;border-radius:10px;background-color:#1F274D;color:#ffffff !important;font-size:16px;font-weight:600;text-decoration:none !important;transition:background-color .25s ease;}
+.nwm-book .nwm-loc-phone:hover{background-color:#0C5D9C;}
+@media (max-width:600px){.nwm-book{padding:0 12px 48px;}.nwm-book .nwm-book-main,.nwm-book .nwm-book-side{margin:0 0 20px;}.nwm-book .nwm-card-body{padding:24px 18px;}.nwm-book .nwm-book-title{font-size:28px;}.nwm-book .nwm-side-head,.nwm-book .nwm-size-wrap,.nwm-book .nwm-side-call{padding-left:18px;padding-right:18px;}}
+.nwm-js .nwm-anim:not(.nwm-anim-ready){opacity:0;}
+html.nwm-anim-fallback .nwm-anim:not(.nwm-anim-ready){opacity:1;}
+html.nwm-anim-off .nwm-anim,html.nwm-anim-off .nwm-anim .nwm-w{opacity:1 !important;transform:none !important;}
+.nwm-anim-ready{opacity:0;transform:translateY(32px);}
+.nwm-anim-armed{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim-ready.nwm-a-left{transform:translateX(-48px);}
+.nwm-anim-ready.nwm-a-right{transform:translateX(48px);}
+.nwm-anim-ready.nwm-a-pop{transform:scale(.88);}
+.nwm-anim-ready.nwm-a-fade{transform:none;}
+.nwm-anim-ready.nwm-split{opacity:1;transform:none;}
+.nwm-split .nwm-w{display:inline-block;}
+.nwm-anim-ready.nwm-split .nwm-w{opacity:0;transform:translateY(.55em);}
+.nwm-anim-armed.nwm-split .nwm-w{transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);}
+.nwm-anim.nwm-anim-ready.nwm-in{opacity:1;transform:none;}
+.nwm-anim.nwm-anim-ready.nwm-in .nwm-w{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){.nwm-anim-ready,.nwm-anim-ready .nwm-w{opacity:1 !important;transform:none !important;transition:none !important;}}
+</style>
+<div class="nwm-book" id="nwm-book">
+<div class="nwm-book-grid">
+<div class="nwm-book-main nwm-anim nwm-a-left">
+<div class="nwm-card">
+<div class="nwm-card-body">
+<h2 class="nwm-book-title nwm-anim nwm-split" data-nwm-delay="200">Claim Your $49 Voucher</h2>
+<p class="nwm-book-lead">Enter your details and we'll text your voucher straight to your phone. Your visit includes:</p>
+<ul class="nwm-book-list">
+<li class="nwm-anim nwm-a-pop" data-nwm-delay="300">Consultation</li>
+<li class="nwm-anim nwm-a-pop" data-nwm-delay="380">Laser Introductory Treatment</li>
+<li class="nwm-anim nwm-a-pop" data-nwm-delay="460">Doctor's Recommended Treatment Options</li>
+</ul>
+<p class="nwm-book-price nwm-anim" data-nwm-delay="200">Your special price <strong>$49</strong></p>
+<div class="nwm-book-form">
+<div class="nwm-book-placeholder">FORM PLACEHOLDER: replace this line with your GHL form embed code</div>
+</div>
+<p class="nwm-book-secure">&#128274; Your information is secure and will not be shared.</p>
+</div>
+</div>
+</div>
+<div class="nwm-book-side nwm-anim nwm-a-right" data-nwm-delay-wide="150">
+<div class="nwm-card">
+<div class="nwm-side-head">
+<h3 class="nwm-side-title">Good to Know</h3>
+<p class="nwm-side-text">The $49 introductory special is for one small tattoo. Medium and large tattoos can still be treated, at an additional cost.</p>
+</div>
+<div class="nwm-size-wrap">
+<table class="nwm-size">
+<tr><th>Tattoo size</th><th>Area</th><th>$49 special</th></tr>
+<tr><td><strong>Small</strong></td><td>5 cm&sup2; or less</td><td class="nwm-inc-yes">Included</td></tr>
+<tr><td><strong>Medium</strong></td><td>About 10 cm&sup2;</td><td class="nwm-inc-extra">Additional cost</td></tr>
+<tr><td><strong>Large</strong></td><td>20 cm&sup2; or more</td><td class="nwm-inc-extra">Additional cost</td></tr>
+</table>
+</div>
+<div class="nwm-side-call">
+<p>Not sure what size your tattoo is? Give us a call.</p>
+<a class="nwm-loc-phone" href="tel:+18135749206">Call (813) 574-9206</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+function split(el,base){var kids=[].slice.call(el.childNodes),n=0;el.textContent='';kids.forEach(function(k){if(k.nodeType===3){k.nodeValue.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){el.appendChild(document.createTextNode(' '));}else{var s=document.createElement('span');s.className='nwm-w';s.textContent=p;s.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(s);}});}else if(k.nodeType===1){k.className+=' nwm-w';k.style.transitionDelay=(base+n++*70)+'ms';el.appendChild(k);}});}
+function run(){try{
+var els=document.querySelectorAll('.nwm-anim:not(.nwm-anim-ready)');
+if(!els.length||!('IntersectionObserver' in window))return;
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var wide=window.innerWidth>600;
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('nwm-in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+for(var i=0;i<els.length;i++){var el=els[i];var d=parseInt(el.getAttribute('data-nwm-delay')||'0',10);var dw=el.getAttribute('data-nwm-delay-wide');if(dw&&wide)d=parseInt(dw,10);
+el.setAttribute('data-nwm-d',d);if(el.classList.contains('nwm-split'))split(el,d);
+el.classList.add('nwm-anim-ready');}
+for(var k=0;k<els.length;k++){void getComputedStyle(els[k]).opacity;}
+for(var j=0;j<els.length;j++){var dj=els[j].getAttribute('data-nwm-d');if(dj&&dj!=='0'&&!els[j].classList.contains('nwm-split'))els[j].style.transitionDelay=dj+'ms';els[j].classList.add('nwm-anim-armed');io.observe(els[j]);}
+}catch(err){document.documentElement.className+=' nwm-anim-off';}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
