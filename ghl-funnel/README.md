@@ -6,6 +6,7 @@ Five standalone blocks. Each one carries its own styles, so you can paste them i
 |---|------|------------|
 | 1 | `sections/01-hero.html` | Offer headline, subheadline and a button that jumps to booking |
 | 2 | `sections/02-booking.html` | Booking card (where your calendar goes) plus the location card and map |
+| 2b | `sections/02b-calendar-only.html` | Alternative to section 2: only the calendar, in one wide card (no location card or map). Use 2 **or** 2b, not both |
 | 3 | `sections/03-whats-included.html` | The 6 included services and a CTA button |
 | 4 | `sections/04-video.html` | Video frame (empty for now) and a CTA button |
 | 5 | `sections/05-footer.html` | Address, phone, disclaimer, copyright and privacy link |
