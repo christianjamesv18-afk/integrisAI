@@ -20,11 +20,12 @@ For each file, in order:
 2. Add a **1-column Row**. Set it to full width with padding 0 as well.
 3. Drag in a **Custom JS/HTML** element and paste the **entire** file contents into it.
 
-## Three things to fill in
+## Two things to fill in
 
-1. **Calendar** (`02-booking.html`): find the line that says `CALENDAR PLACEHOLDER`. Replace that whole `<div class="nwm-book-placeholder">...</div>` line with your GHL calendar embed code. You get the embed code from Calendars → Calendar Settings → your calendar → **Embed Code**.
-2. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed. It fills the 16:9 frame on its own.
-3. **Privacy Policy link** (`05-footer.html`): change `href="#"` to your policy page URL.
+The GHL calendar (Personal booking, 30 min, US/Eastern) is already embedded in `02-booking.html`.
+
+1. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed. It fills the 16:9 frame on its own.
+2. **Privacy Policy link** (`05-footer.html`): change `href="#"` to your policy page URL.
 
 ## If the page shows CSS as plain text
 
