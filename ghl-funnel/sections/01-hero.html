@@ -1,113 +1,31 @@
-<!-- ============================================================
-     SECTION 1 — HERO / OFFER
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-hero {
-    --nwm-blue: #009CE7;
-    --nwm-blue-deep: #0C5D9C;
-    --nwm-navy: #1F274D;
-    --nwm-cyan: #3CCAF3;
-    --nwm-yellow: #FDBE0B;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 72px 20px 64px;
-    background:
-      radial-gradient(1200px 400px at 50% -120px, rgba(60, 202, 243, .55), transparent 70%),
-      var(--nwm-blue);
-    color: #fff;
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  .nwm-hero *, .nwm-hero *::before, .nwm-hero *::after { box-sizing: border-box; }
-  .nwm-hero__inner { max-width: 880px; margin: 0 auto; }
-  .nwm-hero__eyebrow {
-    display: inline-block;
-    margin: 0 0 22px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    background: var(--nwm-navy);
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-  .nwm-hero__title {
-    margin: 0 0 18px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(34px, 6vw, 60px);
-    font-weight: 700;
-    line-height: 1.1;
-    color: #fff;
-  }
-  .nwm-hero__title span { color: var(--nwm-navy); }
-  .nwm-hero__sub {
-    max-width: 680px;
-    margin: 0 auto 30px;
-    font-size: clamp(17px, 2.2vw, 20px);
-    line-height: 1.6;
-    color: rgba(255, 255, 255, .95);
-  }
-  .nwm-hero__facts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 0 0 34px;
-    padding: 0;
-    list-style: none;
-  }
-  .nwm-hero__facts li {
-    padding: 9px 16px;
-    border: 1px solid rgba(255, 255, 255, .45);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .12);
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .nwm-btn {
-    display: inline-block;
-    padding: 18px 34px;
-    border-radius: 12px;
-    background: var(--nwm-yellow);
-    color: var(--nwm-navy) !important;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: 0 10px 24px rgba(31, 39, 77, .28);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .nwm-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(31, 39, 77, .34); }
-  .nwm-hero__note {
-    margin: 16px 0 0;
-    font-size: 14px;
-    color: rgba(255, 255, 255, .85);
-  }
-  @media (max-width: 600px) {
-    .nwm-hero { padding: 48px 16px 44px; }
-    .nwm-btn { display: block; width: 100%; padding: 17px 16px; font-size: 16px; }
-  }
+.nwm-hero{box-sizing:border-box;width:100%;padding:72px 20px 64px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
+.nwm-hero *{box-sizing:border-box;}
+.nwm-hero .nwm-hero-inner{max-width:880px;margin:0 auto;}
+.nwm-hero .nwm-hero-eyebrow{display:inline-block;margin:0 0 22px;padding:8px 16px;border-radius:999px;background-color:#1F274D;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.nwm-hero .nwm-hero-title{margin:0 0 18px;font-family:'Lora',Georgia,serif;font-size:56px;font-weight:700;line-height:1.1;color:#ffffff;}
+.nwm-hero .nwm-hero-title span{color:#1F274D;}
+.nwm-hero .nwm-hero-sub{max-width:680px;margin:0 auto 30px;font-family:'Inter',Arial,sans-serif;font-size:20px;line-height:1.6;color:#ffffff;}
+.nwm-hero .nwm-hero-facts{margin:0 0 34px;padding:0;list-style:none;text-align:center;}
+.nwm-hero .nwm-hero-facts li{display:inline-block;margin:5px;padding:9px 16px;border:1px solid rgba(255,255,255,0.45);border-radius:999px;background-color:rgba(255,255,255,0.12);font-family:'Inter',Arial,sans-serif;font-size:15px;font-weight:500;color:#ffffff;}
+.nwm-hero .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);}
+.nwm-hero .nwm-btn:hover{background-color:#FFCB33;}
+.nwm-hero .nwm-hero-note{margin:16px 0 0;font-family:'Inter',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.85);}
+@media (max-width:900px){.nwm-hero .nwm-hero-title{font-size:44px;}}
+@media (max-width:600px){.nwm-hero{padding:48px 16px 44px;}.nwm-hero .nwm-hero-title{font-size:34px;}.nwm-hero .nwm-hero-sub{font-size:17px;}.nwm-hero .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
 </style>
-
-<section class="nwm-hero">
-  <div class="nwm-hero__inner">
-    <p class="nwm-hero__eyebrow">Limited-Time New Patient Offer</p>
-    <h1 class="nwm-hero__title">The <span>$49</span> Spinal Decompression Special</h1>
-    <p class="nwm-hero__sub">
-      Find out what's really causing your back or neck pain. Your visit includes a full
-      consultation, exam, and your first spinal decompression session, all for $49.
-    </p>
-    <ul class="nwm-hero__facts">
-      <li>6 services included</li>
-      <li>Non-surgical</li>
-      <li>Riverview, FL</li>
-    </ul>
-    <a class="nwm-btn" href="#nwm-book">Choose My Appointment Time &rarr;</a>
-    <p class="nwm-hero__note">This promotional price is available for a limited time.</p>
-  </div>
-</section>
+<div class="nwm-hero">
+<div class="nwm-hero-inner">
+<p class="nwm-hero-eyebrow">Limited-Time New Patient Offer</p>
+<h1 class="nwm-hero-title">The <span>$49</span> Spinal Decompression Special</h1>
+<p class="nwm-hero-sub">Find out what's really causing your back or neck pain. Your visit includes a full consultation, exam, and your first spinal decompression session, all for $49.</p>
+<ul class="nwm-hero-facts">
+<li>6 services included</li>
+<li>Non-surgical</li>
+<li>Riverview, FL</li>
+</ul>
+<a class="nwm-btn" href="#nwm-book">Choose My Appointment Time &rarr;</a>
+<p class="nwm-hero-note">This promotional price is available for a limited time.</p>
+</div>
+</div>

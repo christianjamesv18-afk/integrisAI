@@ -1,666 +1,192 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NewWave Funnel Preview</title>
 <style>html{scroll-behavior:smooth}body{margin:0;background:#009CE7}</style></head><body>
-<!-- Generated preview: concatenation of sections/*.html. Paste the individual section files into GHL, not this one. -->
-<!-- ============================================================
-     SECTION 1 — HERO / OFFER
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-hero {
-    --nwm-blue: #009CE7;
-    --nwm-blue-deep: #0C5D9C;
-    --nwm-navy: #1F274D;
-    --nwm-cyan: #3CCAF3;
-    --nwm-yellow: #FDBE0B;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 72px 20px 64px;
-    background:
-      radial-gradient(1200px 400px at 50% -120px, rgba(60, 202, 243, .55), transparent 70%),
-      var(--nwm-blue);
-    color: #fff;
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  .nwm-hero *, .nwm-hero *::before, .nwm-hero *::after { box-sizing: border-box; }
-  .nwm-hero__inner { max-width: 880px; margin: 0 auto; }
-  .nwm-hero__eyebrow {
-    display: inline-block;
-    margin: 0 0 22px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    background: var(--nwm-navy);
-    color: #fff;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-  .nwm-hero__title {
-    margin: 0 0 18px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(34px, 6vw, 60px);
-    font-weight: 700;
-    line-height: 1.1;
-    color: #fff;
-  }
-  .nwm-hero__title span { color: var(--nwm-navy); }
-  .nwm-hero__sub {
-    max-width: 680px;
-    margin: 0 auto 30px;
-    font-size: clamp(17px, 2.2vw, 20px);
-    line-height: 1.6;
-    color: rgba(255, 255, 255, .95);
-  }
-  .nwm-hero__facts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 0 0 34px;
-    padding: 0;
-    list-style: none;
-  }
-  .nwm-hero__facts li {
-    padding: 9px 16px;
-    border: 1px solid rgba(255, 255, 255, .45);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .12);
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .nwm-btn {
-    display: inline-block;
-    padding: 18px 34px;
-    border-radius: 12px;
-    background: var(--nwm-yellow);
-    color: var(--nwm-navy) !important;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: 0 10px 24px rgba(31, 39, 77, .28);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .nwm-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(31, 39, 77, .34); }
-  .nwm-hero__note {
-    margin: 16px 0 0;
-    font-size: 14px;
-    color: rgba(255, 255, 255, .85);
-  }
-  @media (max-width: 600px) {
-    .nwm-hero { padding: 48px 16px 44px; }
-    .nwm-btn { display: block; width: 100%; padding: 17px 16px; font-size: 16px; }
-  }
+.nwm-hero{box-sizing:border-box;width:100%;padding:72px 20px 64px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
+.nwm-hero *{box-sizing:border-box;}
+.nwm-hero .nwm-hero-inner{max-width:880px;margin:0 auto;}
+.nwm-hero .nwm-hero-eyebrow{display:inline-block;margin:0 0 22px;padding:8px 16px;border-radius:999px;background-color:#1F274D;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.nwm-hero .nwm-hero-title{margin:0 0 18px;font-family:'Lora',Georgia,serif;font-size:56px;font-weight:700;line-height:1.1;color:#ffffff;}
+.nwm-hero .nwm-hero-title span{color:#1F274D;}
+.nwm-hero .nwm-hero-sub{max-width:680px;margin:0 auto 30px;font-family:'Inter',Arial,sans-serif;font-size:20px;line-height:1.6;color:#ffffff;}
+.nwm-hero .nwm-hero-facts{margin:0 0 34px;padding:0;list-style:none;text-align:center;}
+.nwm-hero .nwm-hero-facts li{display:inline-block;margin:5px;padding:9px 16px;border:1px solid rgba(255,255,255,0.45);border-radius:999px;background-color:rgba(255,255,255,0.12);font-family:'Inter',Arial,sans-serif;font-size:15px;font-weight:500;color:#ffffff;}
+.nwm-hero .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);}
+.nwm-hero .nwm-btn:hover{background-color:#FFCB33;}
+.nwm-hero .nwm-hero-note{margin:16px 0 0;font-family:'Inter',Arial,sans-serif;font-size:14px;color:rgba(255,255,255,0.85);}
+@media (max-width:900px){.nwm-hero .nwm-hero-title{font-size:44px;}}
+@media (max-width:600px){.nwm-hero{padding:48px 16px 44px;}.nwm-hero .nwm-hero-title{font-size:34px;}.nwm-hero .nwm-hero-sub{font-size:17px;}.nwm-hero .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
 </style>
+<div class="nwm-hero">
+<div class="nwm-hero-inner">
+<p class="nwm-hero-eyebrow">Limited-Time New Patient Offer</p>
+<h1 class="nwm-hero-title">The <span>$49</span> Spinal Decompression Special</h1>
+<p class="nwm-hero-sub">Find out what's really causing your back or neck pain. Your visit includes a full consultation, exam, and your first spinal decompression session, all for $49.</p>
+<ul class="nwm-hero-facts">
+<li>6 services included</li>
+<li>Non-surgical</li>
+<li>Riverview, FL</li>
+</ul>
+<a class="nwm-btn" href="#nwm-book">Choose My Appointment Time &rarr;</a>
+<p class="nwm-hero-note">This promotional price is available for a limited time.</p>
+</div>
+</div>
 
-<section class="nwm-hero">
-  <div class="nwm-hero__inner">
-    <p class="nwm-hero__eyebrow">Limited-Time New Patient Offer</p>
-    <h1 class="nwm-hero__title">The <span>$49</span> Spinal Decompression Special</h1>
-    <p class="nwm-hero__sub">
-      Find out what's really causing your back or neck pain. Your visit includes a full
-      consultation, exam, and your first spinal decompression session, all for $49.
-    </p>
-    <ul class="nwm-hero__facts">
-      <li>6 services included</li>
-      <li>Non-surgical</li>
-      <li>Riverview, FL</li>
-    </ul>
-    <a class="nwm-btn" href="#nwm-book">Choose My Appointment Time &rarr;</a>
-    <p class="nwm-hero__note">This promotional price is available for a limited time.</p>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECTION 2 — BOOKING (calendar + location)
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-
-     >>> Replace the CALENDAR PLACEHOLDER below with your GHL
-         calendar embed code (Calendars > Calendar Settings >
-         your calendar > "Embed Code").
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-book {
-    --nwm-blue: #009CE7;
-    --nwm-blue-deep: #0C5D9C;
-    --nwm-navy: #1F274D;
-    --nwm-ink: #1c2233;
-    --nwm-muted: #5b6478;
-    --nwm-green: #1FA35A;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 8px 20px 72px;
-    background: var(--nwm-blue);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--nwm-ink);
-  }
-  .nwm-book *, .nwm-book *::before, .nwm-book *::after { box-sizing: border-box; }
-  .nwm-book__grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    gap: 24px;
-    max-width: 1140px;
-    margin: 0 auto;
-    align-items: start;
-  }
-  .nwm-card {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 18px 40px rgba(31, 39, 77, .18);
-    overflow: hidden;
-  }
-  .nwm-card__body { padding: 32px; }
-  .nwm-book__title {
-    margin: 0 0 8px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(28px, 3.4vw, 36px);
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--nwm-navy);
-  }
-  .nwm-book__lead {
-    margin: 0 0 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--nwm-muted);
-  }
-  .nwm-book__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 18px;
-    margin: 0 0 24px;
-    padding: 18px 20px;
-    border-radius: 14px;
-    background: #F1F8FD;
-    list-style: none;
-  }
-  .nwm-book__list li {
-    position: relative;
-    padding-left: 28px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  .nwm-book__list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--nwm-green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10.5l3.2 3L15 7'/%3E%3C/svg%3E") center / 12px no-repeat;
-  }
-  .nwm-book__price {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 12px;
-    margin: 0 0 20px;
-    padding-top: 4px;
-    font-weight: 600;
-    color: var(--nwm-navy);
-  }
-  .nwm-book__price strong {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 32px;
-    color: var(--nwm-blue-deep);
-  }
-  .nwm-book__calendar { min-height: 200px; }
-  /* Placeholder shown until the real calendar embed is pasted in */
-  .nwm-book__placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 520px;
-    padding: 24px;
-    border: 2px dashed #b9d9ef;
-    border-radius: 14px;
-    background: #F7FBFE;
-    color: var(--nwm-muted);
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .nwm-loc__head { padding: 28px 28px 22px; text-align: center; }
-  .nwm-loc__name {
-    margin: 0 0 8px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--nwm-navy);
-  }
-  .nwm-loc__line { margin: 0 0 4px; font-size: 16px; line-height: 1.5; color: var(--nwm-ink); }
-  .nwm-loc__phone {
-    display: inline-block;
-    margin-top: 14px;
-    padding: 12px 22px;
-    border-radius: 10px;
-    background: var(--nwm-navy);
-    color: #fff !important;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none !important;
-  }
-  .nwm-loc__phone:hover { background: var(--nwm-blue-deep); }
-  .nwm-loc__map { display: block; width: 100%; height: 340px; border: 0; }
-  .nwm-loc__hint {
-    margin: 0;
-    padding: 14px 20px;
-    border-top: 1px solid #e6edf3;
-    font-size: 14px;
-    color: var(--nwm-muted);
-    text-align: center;
-  }
-
-  @media (max-width: 900px) {
-    .nwm-book__grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 600px) {
-    .nwm-book { padding: 0 12px 48px; }
-    .nwm-card__body { padding: 24px 18px; }
-    .nwm-book__list { grid-template-columns: 1fr; }
-    .nwm-loc__map { height: 260px; }
-  }
+.nwm-book{box-sizing:border-box;width:100%;padding:8px 20px 72px;background-color:#009CE7;font-family:'Inter',Arial,sans-serif;color:#1c2233;}
+.nwm-book *{box-sizing:border-box;}
+.nwm-book .nwm-book-grid{display:flex;flex-wrap:wrap;align-items:flex-start;max-width:1140px;margin:0 auto;}
+.nwm-book .nwm-book-main{flex:1 1 560px;min-width:0;margin:0 12px 24px;}
+.nwm-book .nwm-book-side{flex:1 1 340px;min-width:0;margin:0 12px 24px;}
+.nwm-book .nwm-card{background-color:#ffffff;border-radius:20px;box-shadow:0 18px 40px rgba(31,39,77,0.18);overflow:hidden;}
+.nwm-book .nwm-card-body{padding:32px;}
+.nwm-book .nwm-book-title{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;line-height:1.2;color:#1F274D;}
+.nwm-book .nwm-book-lead{margin:0 0 20px;font-family:'Inter',Arial,sans-serif;font-size:16px;line-height:1.6;color:#5b6478;}
+.nwm-book .nwm-book-list{margin:0 0 24px;padding:18px 20px 8px;border-radius:14px;background-color:#F1F8FD;list-style:none;}
+.nwm-book .nwm-book-list li{display:inline-block;width:49%;vertical-align:top;position:relative;margin:0 0 10px;padding-left:28px;font-family:'Inter',Arial,sans-serif;font-size:15px;font-weight:500;line-height:1.4;color:#1c2233;}
+.nwm-book .nwm-book-list li:before{content:"\2713";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background-color:#1FA35A;color:#ffffff;font-size:11px;font-weight:700;line-height:18px;text-align:center;}
+.nwm-book .nwm-book-price{margin:0 0 20px;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:600;color:#1F274D;overflow:hidden;}
+.nwm-book .nwm-book-price strong{float:right;font-family:'Lora',Georgia,serif;font-size:32px;line-height:1;color:#0C5D9C;}
+.nwm-book .nwm-book-placeholder{padding:240px 24px;border:2px dashed #b9d9ef;border-radius:14px;background-color:#F7FBFE;color:#5b6478;font-size:15px;text-align:center;}
+.nwm-book .nwm-loc-head{padding:28px 28px 22px;text-align:center;}
+.nwm-book .nwm-loc-name{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:700;color:#1F274D;}
+.nwm-book .nwm-loc-line{margin:0 0 4px;font-family:'Inter',Arial,sans-serif;font-size:16px;line-height:1.5;color:#1c2233;}
+.nwm-book .nwm-loc-phone{display:inline-block;margin-top:14px;padding:12px 22px;border-radius:10px;background-color:#1F274D;color:#ffffff !important;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:600;text-decoration:none !important;}
+.nwm-book .nwm-loc-phone:hover{background-color:#0C5D9C;}
+.nwm-book .nwm-loc-map{display:block;width:100%;height:340px;border:0;}
+.nwm-book .nwm-loc-hint{margin:0;padding:14px 20px;border-top:1px solid #e6edf3;font-family:'Inter',Arial,sans-serif;font-size:14px;color:#5b6478;text-align:center;}
+@media (max-width:600px){.nwm-book{padding:0 12px 48px;}.nwm-book .nwm-book-main,.nwm-book .nwm-book-side{margin:0 0 20px;}.nwm-book .nwm-card-body{padding:24px 18px;}.nwm-book .nwm-book-title{font-size:28px;}.nwm-book .nwm-book-list li{display:block;width:100%;}.nwm-book .nwm-loc-map{height:260px;}}
 </style>
+<div class="nwm-book" id="nwm-book">
+<div class="nwm-book-grid">
+<div class="nwm-book-main">
+<div class="nwm-card">
+<div class="nwm-card-body">
+<h2 class="nwm-book-title">Book Your Appointment</h2>
+<p class="nwm-book-lead">Pick a day and time that works for you. Your visit includes:</p>
+<ul class="nwm-book-list">
+<li>Consultation</li>
+<li>Full Examination</li>
+<li>Digital X-Rays (if needed)</li>
+<li>MRI Review</li>
+<li>Doctor's Report of Findings</li>
+<li>1 Full Decompression Session</li>
+</ul>
+<p class="nwm-book-price">Your special price <strong>$49</strong></p>
+<div class="nwm-book-calendar">
+<div class="nwm-book-placeholder">CALENDAR PLACEHOLDER: replace this line with your GHL calendar embed code</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nwm-book-side">
+<div class="nwm-card">
+<div class="nwm-loc-head">
+<h3 class="nwm-loc-name">NewWave Medical</h3>
+<p class="nwm-loc-line">13039 Summerfield Square Drive</p>
+<p class="nwm-loc-line">Riverview, FL 33578</p>
+<a class="nwm-loc-phone" href="tel:+18135749206">Call (813) 574-9206</a>
+</div>
+<iframe class="nwm-loc-map" title="Map to NewWave Medical" src="https://www.google.com/maps?q=13039+Summerfield+Square+Drive,+Riverview,+FL+33578&output=embed" loading="lazy"></iframe>
+<p class="nwm-loc-hint">Prefer to talk first? Give us a call and we'll help you pick a time.</p>
+</div>
+</div>
+</div>
+</div>
 
-<section class="nwm-book" id="nwm-book">
-  <div class="nwm-book__grid">
-
-    <!-- Calendar card -->
-    <div class="nwm-card">
-      <div class="nwm-card__body">
-        <h2 class="nwm-book__title">Book Your Appointment</h2>
-        <p class="nwm-book__lead">Pick a day and time that works for you. Your visit includes:</p>
-        <ul class="nwm-book__list">
-          <li>Consultation</li>
-          <li>Full Examination</li>
-          <li>Digital X-Rays (if needed)</li>
-          <li>MRI Review</li>
-          <li>Doctor's Report of Findings</li>
-          <li>1 Full Decompression Session</li>
-        </ul>
-        <p class="nwm-book__price">Your special price <strong>$49</strong></p>
-
-        <div class="nwm-book__calendar">
-          <!-- ===== CALENDAR PLACEHOLDER: delete this div and paste your GHL calendar embed code here ===== -->
-          <div class="nwm-book__placeholder">Your GHL calendar embed goes here</div>
-          <!-- ===== END CALENDAR PLACEHOLDER ===== -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Location card -->
-    <div class="nwm-card">
-      <div class="nwm-loc__head">
-        <h3 class="nwm-loc__name">NewWave Medical</h3>
-        <p class="nwm-loc__line">13039 Summerfield Square Drive</p>
-        <p class="nwm-loc__line">Riverview, FL 33578</p>
-        <a class="nwm-loc__phone" href="tel:+18135749206">Call (813) 574-9206</a>
-      </div>
-      <iframe
-        class="nwm-loc__map"
-        title="Map to NewWave Medical"
-        src="https://www.google.com/maps?q=13039+Summerfield+Square+Drive,+Riverview,+FL+33578&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <p class="nwm-loc__hint">Prefer to talk first? Give us a call and we'll help you pick a time.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============================================================
-     SECTION 3 — WHAT'S INCLUDED
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-inc {
-    --nwm-blue: #009CE7;
-    --nwm-blue-deep: #0C5D9C;
-    --nwm-navy: #1F274D;
-    --nwm-ink: #1c2233;
-    --nwm-muted: #5b6478;
-    --nwm-yellow: #FDBE0B;
-    --nwm-green: #1FA35A;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 72px 20px;
-    background: #fff;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--nwm-ink);
-  }
-  .nwm-inc *, .nwm-inc *::before, .nwm-inc *::after { box-sizing: border-box; }
-  .nwm-inc__inner { max-width: 1140px; margin: 0 auto; }
-  .nwm-inc__head { max-width: 720px; margin: 0 auto 44px; text-align: center; }
-  .nwm-inc__kicker {
-    margin: 0 0 10px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--nwm-blue);
-  }
-  .nwm-inc__title {
-    margin: 0 0 14px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(30px, 4.4vw, 44px);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--nwm-blue-deep);
-  }
-  .nwm-inc__sub { margin: 0; font-size: 18px; line-height: 1.6; color: var(--nwm-muted); }
-
-  .nwm-inc__grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .nwm-inc__item {
-    position: relative;
-    padding: 28px 26px 26px;
-    border: 1px solid #e3edf5;
-    border-top: 4px solid var(--nwm-blue);
-    border-radius: 16px;
-    background: #F7FBFE;
-  }
-  .nwm-inc__num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    margin-bottom: 16px;
-    border-radius: 12px;
-    background: var(--nwm-navy);
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-  }
-  .nwm-inc__item h3 {
-    margin: 0 0 8px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: var(--nwm-navy);
-  }
-  .nwm-inc__item h3 small {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--nwm-muted);
-  }
-  .nwm-inc__item p { margin: 0; font-size: 16px; line-height: 1.6; color: #3d4557; }
-
-  .nwm-inc__cta { margin-top: 44px; text-align: center; }
-  .nwm-btn {
-    display: inline-block;
-    padding: 18px 34px;
-    border-radius: 12px;
-    background: var(--nwm-yellow);
-    color: var(--nwm-navy) !important;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: 0 10px 24px rgba(31, 39, 77, .22);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .nwm-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(31, 39, 77, .3); }
-
-  @media (max-width: 960px) {
-    .nwm-inc__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 600px) {
-    .nwm-inc { padding: 52px 16px; }
-    .nwm-inc__head { margin-bottom: 30px; }
-    .nwm-inc__sub { font-size: 17px; }
-    .nwm-inc__grid { grid-template-columns: 1fr; gap: 14px; }
-    .nwm-inc__item { padding: 22px 20px; }
-    .nwm-btn { display: block; width: 100%; padding: 17px 16px; font-size: 16px; }
-  }
+.nwm-inc{box-sizing:border-box;width:100%;padding:72px 20px;background-color:#ffffff;font-family:'Inter',Arial,sans-serif;color:#1c2233;}
+.nwm-inc *{box-sizing:border-box;}
+.nwm-inc .nwm-inc-inner{max-width:1140px;margin:0 auto;}
+.nwm-inc .nwm-inc-head{max-width:720px;margin:0 auto 44px;text-align:center;}
+.nwm-inc .nwm-inc-kicker{margin:0 0 10px;font-family:'Inter',Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#009CE7;}
+.nwm-inc .nwm-inc-title{margin:0 0 14px;font-family:'Lora',Georgia,serif;font-size:44px;font-weight:700;line-height:1.15;color:#0C5D9C;}
+.nwm-inc .nwm-inc-sub{margin:0;font-family:'Inter',Arial,sans-serif;font-size:18px;line-height:1.6;color:#5b6478;}
+.nwm-inc .nwm-inc-grid{display:flex;flex-wrap:wrap;margin:0 -10px;padding:0;list-style:none;}
+.nwm-inc .nwm-inc-cell{width:33.333%;padding:10px;}
+.nwm-inc .nwm-inc-item{height:100%;padding:28px 26px 26px;border:1px solid #e3edf5;border-top:4px solid #009CE7;border-radius:16px;background-color:#F7FBFE;}
+.nwm-inc .nwm-inc-num{display:inline-block;width:40px;height:40px;margin-bottom:16px;border-radius:12px;background-color:#1F274D;color:#ffffff;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:700;line-height:40px;text-align:center;}
+.nwm-inc .nwm-inc-item h3{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:21px;font-weight:700;line-height:1.3;color:#1F274D;}
+.nwm-inc .nwm-inc-item h3 small{font-family:'Inter',Arial,sans-serif;font-size:13px;font-weight:600;color:#5b6478;}
+.nwm-inc .nwm-inc-item p{margin:0;font-family:'Inter',Arial,sans-serif;font-size:16px;line-height:1.6;color:#3d4557;}
+.nwm-inc .nwm-inc-cta{margin-top:44px;text-align:center;}
+.nwm-inc .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.22);}
+.nwm-inc .nwm-btn:hover{background-color:#FFCB33;}
+@media (max-width:960px){.nwm-inc .nwm-inc-cell{width:50%;}.nwm-inc .nwm-inc-title{font-size:38px;}}
+@media (max-width:600px){.nwm-inc{padding:52px 16px;}.nwm-inc .nwm-inc-head{margin-bottom:30px;}.nwm-inc .nwm-inc-title{font-size:30px;}.nwm-inc .nwm-inc-sub{font-size:17px;}.nwm-inc .nwm-inc-cell{width:100%;padding:7px 10px;}.nwm-inc .nwm-inc-item{padding:22px 20px;}.nwm-inc .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
 </style>
+<div class="nwm-inc">
+<div class="nwm-inc-inner">
+<div class="nwm-inc-head">
+<p class="nwm-inc-kicker">What's Included</p>
+<h2 class="nwm-inc-title">Everything You Get for $49</h2>
+<p class="nwm-inc-sub">One visit, six steps, so you walk out with real answers and a clear plan for your recovery.</p>
+</div>
+<ul class="nwm-inc-grid">
+<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">1</span><h3>Consultation</h3><p>Tell us where it hurts, how long it's been going on, and how it's affecting your daily life. We listen first.</p></div></li>
+<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">2</span><h3>Examination</h3><p>A thorough structural evaluation to pinpoint the imbalances and problem areas behind your symptoms.</p></div></li>
+<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">3</span><h3>Digital X-Rays <small>(if needed)</small></h3><p>Clear images of the affected area so we can see exactly what's going on and choose the right approach.</p></div></li>
+<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">4</span><h3>MRI Review</h3><p>Already had an MRI? We'll explain your results in plain language, walk you through your options, and give you a second opinion.</p></div></li>
+<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">5</span><h3>Doctor's Report of Findings</h3><p>We'll sit down together, explain what's causing your symptoms, and map out a plan to get you back to the life you enjoy.</p></div></li>
+<li class="nwm-inc-cell"><div class="nwm-inc-item"><span class="nwm-inc-num">6</span><h3>Spinal Decompression Session</h3><p>Experience one full, non-surgical spinal decompression treatment so you can feel how it works firsthand.</p></div></li>
+</ul>
+<div class="nwm-inc-cta"><a class="nwm-btn" href="#nwm-book">Claim My $49 Visit &rarr;</a></div>
+</div>
+</div>
 
-<section class="nwm-inc">
-  <div class="nwm-inc__inner">
-    <div class="nwm-inc__head">
-      <p class="nwm-inc__kicker">What's Included</p>
-      <h2 class="nwm-inc__title">Everything You Get for $49</h2>
-      <p class="nwm-inc__sub">One visit, six steps, so you walk out with real answers and a clear plan for your recovery.</p>
-    </div>
-
-    <ol class="nwm-inc__grid">
-      <li class="nwm-inc__item">
-        <span class="nwm-inc__num">1</span>
-        <h3>Consultation</h3>
-        <p>Tell us where it hurts, how long it's been going on, and how it's affecting your daily life. We listen first.</p>
-      </li>
-      <li class="nwm-inc__item">
-        <span class="nwm-inc__num">2</span>
-        <h3>Examination</h3>
-        <p>A thorough structural evaluation to pinpoint the imbalances and problem areas behind your symptoms.</p>
-      </li>
-      <li class="nwm-inc__item">
-        <span class="nwm-inc__num">3</span>
-        <h3>Digital X-Rays <small>(if needed)</small></h3>
-        <p>Clear images of the affected area so we can see exactly what's going on and choose the right approach.</p>
-      </li>
-      <li class="nwm-inc__item">
-        <span class="nwm-inc__num">4</span>
-        <h3>MRI Review</h3>
-        <p>Already had an MRI? We'll explain your results in plain language, walk you through your options, and give you a second opinion.</p>
-      </li>
-      <li class="nwm-inc__item">
-        <span class="nwm-inc__num">5</span>
-        <h3>Doctor's Report of Findings</h3>
-        <p>We'll sit down together, explain what's causing your symptoms, and map out a plan to get you back to the life you enjoy.</p>
-      </li>
-      <li class="nwm-inc__item">
-        <span class="nwm-inc__num">6</span>
-        <h3>Spinal Decompression Session</h3>
-        <p>Experience one full, non-surgical spinal decompression treatment so you can feel how it works firsthand.</p>
-      </li>
-    </ol>
-
-    <div class="nwm-inc__cta">
-      <a class="nwm-btn" href="#nwm-book">Claim My $49 Visit &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECTION 4 — VIDEO
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-
-     >>> Replace the VIDEO PLACEHOLDER below with your video embed
-         (YouTube/Vimeo <iframe>, or a <video> tag). It will
-         automatically fill the 16:9 frame.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-vid {
-    --nwm-blue: #009CE7;
-    --nwm-navy: #1F274D;
-    --nwm-yellow: #FDBE0B;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 72px 20px;
-    background:
-      radial-gradient(900px 360px at 50% 110%, rgba(60, 202, 243, .5), transparent 70%),
-      var(--nwm-blue);
-    color: #fff;
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  .nwm-vid *, .nwm-vid *::before, .nwm-vid *::after { box-sizing: border-box; }
-  .nwm-vid__inner { max-width: 900px; margin: 0 auto; }
-  .nwm-vid__title {
-    margin: 0 0 12px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(30px, 4.4vw, 44px);
-    font-weight: 700;
-    line-height: 1.15;
-    color: #fff;
-  }
-  .nwm-vid__sub {
-    max-width: 620px;
-    margin: 0 auto 32px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, .95);
-  }
-  .nwm-vid__frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: 6px solid #fff;
-    border-radius: 20px;
-    background: var(--nwm-navy);
-    box-shadow: 0 22px 50px rgba(31, 39, 77, .35);
-    overflow: hidden;
-  }
-  .nwm-vid__frame iframe,
-  .nwm-vid__frame video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  /* Placeholder shown until the real video is pasted in */
-  .nwm-vid__placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    color: rgba(255, 255, 255, .75);
-    font-size: 15px;
-  }
-  .nwm-vid__play {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--nwm-yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231F274D'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") 55% 50% / 32px no-repeat;
-  }
-  .nwm-vid__cta { margin-top: 40px; }
-  .nwm-btn {
-    display: inline-block;
-    padding: 18px 34px;
-    border-radius: 12px;
-    background: var(--nwm-yellow);
-    color: var(--nwm-navy) !important;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: 0 10px 24px rgba(31, 39, 77, .28);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .nwm-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(31, 39, 77, .34); }
-  @media (max-width: 600px) {
-    .nwm-vid { padding: 52px 16px; }
-    .nwm-vid__sub { font-size: 17px; }
-    .nwm-vid__frame { border-width: 4px; border-radius: 14px; }
-    .nwm-btn { display: block; width: 100%; padding: 17px 16px; font-size: 16px; }
-  }
+.nwm-vid{box-sizing:border-box;width:100%;padding:72px 20px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
+.nwm-vid *{box-sizing:border-box;}
+.nwm-vid .nwm-vid-inner{max-width:900px;margin:0 auto;}
+.nwm-vid .nwm-vid-title{margin:0 0 12px;font-family:'Lora',Georgia,serif;font-size:44px;font-weight:700;line-height:1.15;color:#ffffff;}
+.nwm-vid .nwm-vid-sub{max-width:620px;margin:0 auto 32px;font-family:'Inter',Arial,sans-serif;font-size:18px;line-height:1.6;color:#ffffff;}
+.nwm-vid .nwm-vid-frame{position:relative;width:100%;height:0;padding-bottom:56.25%;border:6px solid #ffffff;border-radius:20px;background-color:#1F274D;box-shadow:0 22px 50px rgba(31,39,77,0.35);overflow:hidden;}
+.nwm-vid .nwm-vid-frame iframe,.nwm-vid .nwm-vid-frame video{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+.nwm-vid .nwm-vid-placeholder{position:absolute;top:50%;left:0;width:100%;margin-top:-50px;text-align:center;font-family:'Inter',Arial,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);}
+.nwm-vid .nwm-vid-play{display:block;position:relative;width:72px;height:72px;margin:0 auto 14px;border-radius:50%;background-color:#FDBE0B;}
+.nwm-vid .nwm-vid-play:after{content:"";position:absolute;top:22px;left:28px;width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid #1F274D;}
+.nwm-vid .nwm-vid-cta{margin-top:40px;}
+.nwm-vid .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);}
+.nwm-vid .nwm-btn:hover{background-color:#FFCB33;}
+@media (max-width:900px){.nwm-vid .nwm-vid-title{font-size:38px;}}
+@media (max-width:600px){.nwm-vid{padding:52px 16px;}.nwm-vid .nwm-vid-title{font-size:30px;}.nwm-vid .nwm-vid-sub{font-size:17px;}.nwm-vid .nwm-vid-frame{border-width:4px;border-radius:14px;}.nwm-vid .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
 </style>
+<div class="nwm-vid">
+<div class="nwm-vid-inner">
+<h2 class="nwm-vid-title">See Spinal Decompression in Action</h2>
+<p class="nwm-vid-sub">Watch a real treatment session so you know exactly what to expect when you come in.</p>
+<div class="nwm-vid-frame">
+<div class="nwm-vid-placeholder"><span class="nwm-vid-play"></span>VIDEO PLACEHOLDER: replace this line with your video embed</div>
+</div>
+<div class="nwm-vid-cta"><a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a></div>
+</div>
+</div>
 
-<section class="nwm-vid">
-  <div class="nwm-vid__inner">
-    <h2 class="nwm-vid__title">See Spinal Decompression in Action</h2>
-    <p class="nwm-vid__sub">Watch a real treatment session so you know exactly what to expect when you come in.</p>
-
-    <div class="nwm-vid__frame">
-      <!-- ===== VIDEO PLACEHOLDER: delete this div and paste your video embed here ===== -->
-      <div class="nwm-vid__placeholder">
-        <span class="nwm-vid__play" aria-hidden="true"></span>
-        Video coming soon
-      </div>
-      <!-- ===== END VIDEO PLACEHOLDER ===== -->
-    </div>
-
-    <div class="nwm-vid__cta">
-      <a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECTION 5 — FOOTER
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-
-     >>> Update the Privacy Policy link href to your policy page.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-foot {
-    --nwm-footer: #252C37;
-    --nwm-cyan: #3CCAF3;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 44px 20px 40px;
-    background: var(--nwm-footer);
-    color: rgba(255, 255, 255, .8);
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  .nwm-foot *, .nwm-foot *::before, .nwm-foot *::after { box-sizing: border-box; }
-  .nwm-foot__inner { max-width: 760px; margin: 0 auto; }
-  .nwm-foot__name { margin: 0 0 6px; font-size: 18px; font-weight: 700; color: #fff; }
-  .nwm-foot p { margin: 0; }
-  .nwm-foot a { color: var(--nwm-cyan) !important; text-decoration: none !important; }
-  .nwm-foot a:hover { text-decoration: underline !important; }
-  .nwm-foot__sep { margin: 0 8px; opacity: .5; }
-  .nwm-foot__disclaimer {
-    margin: 22px auto 18px !important;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, .12);
-    font-size: 13px;
-    color: rgba(255, 255, 255, .6);
-  }
-  .nwm-foot__legal { font-size: 13px; color: rgba(255, 255, 255, .6); }
-  @media (max-width: 600px) {
-    .nwm-foot { padding: 36px 16px 32px; font-size: 14px; }
-    .nwm-foot__sep { display: none; }
-    .nwm-foot__addr, .nwm-foot__tel, .nwm-foot__legal a { display: block; }
-  }
+.nwm-foot{box-sizing:border-box;width:100%;padding:44px 20px 40px;background-color:#252C37;color:rgba(255,255,255,0.8);text-align:center;font-family:'Inter',Arial,sans-serif;font-size:15px;line-height:1.7;}
+.nwm-foot *{box-sizing:border-box;}
+.nwm-foot .nwm-foot-inner{max-width:760px;margin:0 auto;}
+.nwm-foot p{margin:0;font-family:'Inter',Arial,sans-serif;color:rgba(255,255,255,0.8);}
+.nwm-foot .nwm-foot-name{margin:0 0 6px;font-size:18px;font-weight:700;color:#ffffff;}
+.nwm-foot a{color:#3CCAF3 !important;text-decoration:none !important;}
+.nwm-foot a:hover{text-decoration:underline !important;}
+.nwm-foot .nwm-foot-sep{margin:0 8px;opacity:0.5;}
+.nwm-foot .nwm-foot-disclaimer{margin:22px auto 18px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.12);font-size:13px;color:rgba(255,255,255,0.6);}
+.nwm-foot .nwm-foot-legal{font-size:13px;color:rgba(255,255,255,0.6);}
+@media (max-width:600px){.nwm-foot{padding:36px 16px 32px;font-size:14px;}.nwm-foot .nwm-foot-sep{display:none;}.nwm-foot .nwm-foot-addr,.nwm-foot .nwm-foot-tel,.nwm-foot .nwm-foot-legal a{display:block;}}
 </style>
-
-<footer class="nwm-foot">
-  <div class="nwm-foot__inner">
-    <p class="nwm-foot__name">NewWave Medical</p>
-    <p>
-      <span class="nwm-foot__addr">13039 Summerfield Square Drive, Riverview, FL 33578</span><span class="nwm-foot__sep">|</span><a class="nwm-foot__tel" href="tel:+18135749206">(813) 574-9206</a>
-    </p>
-    <p class="nwm-foot__disclaimer">Disclaimer: Medicare is not accepted and federal insurance rules apply.</p>
-    <p class="nwm-foot__legal">
-      &copy; 2026 NewWave Medical. All Rights Reserved.<span class="nwm-foot__sep">|</span><a href="#">Privacy Policy</a>
-    </p>
-  </div>
-</footer>
+<div class="nwm-foot">
+<div class="nwm-foot-inner">
+<p class="nwm-foot-name">NewWave Medical</p>
+<p><span class="nwm-foot-addr">13039 Summerfield Square Drive, Riverview, FL 33578</span><span class="nwm-foot-sep">|</span><a class="nwm-foot-tel" href="tel:+18135749206">(813) 574-9206</a></p>
+<p class="nwm-foot-disclaimer">Disclaimer: Medicare is not accepted and federal insurance rules apply.</p>
+<p class="nwm-foot-legal">&copy; 2026 NewWave Medical. All Rights Reserved.<span class="nwm-foot-sep">|</span><a href="#">Privacy Policy</a></p>
+</div>
+</div>
 
 </body></html>

@@ -1,201 +1,62 @@
-<!-- ============================================================
-     SECTION 2 — BOOKING (calendar + location)
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-
-     >>> Replace the CALENDAR PLACEHOLDER below with your GHL
-         calendar embed code (Calendars > Calendar Settings >
-         your calendar > "Embed Code").
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-book {
-    --nwm-blue: #009CE7;
-    --nwm-blue-deep: #0C5D9C;
-    --nwm-navy: #1F274D;
-    --nwm-ink: #1c2233;
-    --nwm-muted: #5b6478;
-    --nwm-green: #1FA35A;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 8px 20px 72px;
-    background: var(--nwm-blue);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: var(--nwm-ink);
-  }
-  .nwm-book *, .nwm-book *::before, .nwm-book *::after { box-sizing: border-box; }
-  .nwm-book__grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    gap: 24px;
-    max-width: 1140px;
-    margin: 0 auto;
-    align-items: start;
-  }
-  .nwm-card {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 18px 40px rgba(31, 39, 77, .18);
-    overflow: hidden;
-  }
-  .nwm-card__body { padding: 32px; }
-  .nwm-book__title {
-    margin: 0 0 8px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(28px, 3.4vw, 36px);
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--nwm-navy);
-  }
-  .nwm-book__lead {
-    margin: 0 0 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--nwm-muted);
-  }
-  .nwm-book__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 18px;
-    margin: 0 0 24px;
-    padding: 18px 20px;
-    border-radius: 14px;
-    background: #F1F8FD;
-    list-style: none;
-  }
-  .nwm-book__list li {
-    position: relative;
-    padding-left: 28px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-  .nwm-book__list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--nwm-green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 10.5l3.2 3L15 7'/%3E%3C/svg%3E") center / 12px no-repeat;
-  }
-  .nwm-book__price {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 12px;
-    margin: 0 0 20px;
-    padding-top: 4px;
-    font-weight: 600;
-    color: var(--nwm-navy);
-  }
-  .nwm-book__price strong {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 32px;
-    color: var(--nwm-blue-deep);
-  }
-  .nwm-book__calendar { min-height: 200px; }
-  /* Placeholder shown until the real calendar embed is pasted in */
-  .nwm-book__placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 520px;
-    padding: 24px;
-    border: 2px dashed #b9d9ef;
-    border-radius: 14px;
-    background: #F7FBFE;
-    color: var(--nwm-muted);
-    font-size: 15px;
-    text-align: center;
-  }
-
-  .nwm-loc__head { padding: 28px 28px 22px; text-align: center; }
-  .nwm-loc__name {
-    margin: 0 0 8px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--nwm-navy);
-  }
-  .nwm-loc__line { margin: 0 0 4px; font-size: 16px; line-height: 1.5; color: var(--nwm-ink); }
-  .nwm-loc__phone {
-    display: inline-block;
-    margin-top: 14px;
-    padding: 12px 22px;
-    border-radius: 10px;
-    background: var(--nwm-navy);
-    color: #fff !important;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none !important;
-  }
-  .nwm-loc__phone:hover { background: var(--nwm-blue-deep); }
-  .nwm-loc__map { display: block; width: 100%; height: 340px; border: 0; }
-  .nwm-loc__hint {
-    margin: 0;
-    padding: 14px 20px;
-    border-top: 1px solid #e6edf3;
-    font-size: 14px;
-    color: var(--nwm-muted);
-    text-align: center;
-  }
-
-  @media (max-width: 900px) {
-    .nwm-book__grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 600px) {
-    .nwm-book { padding: 0 12px 48px; }
-    .nwm-card__body { padding: 24px 18px; }
-    .nwm-book__list { grid-template-columns: 1fr; }
-    .nwm-loc__map { height: 260px; }
-  }
+.nwm-book{box-sizing:border-box;width:100%;padding:8px 20px 72px;background-color:#009CE7;font-family:'Inter',Arial,sans-serif;color:#1c2233;}
+.nwm-book *{box-sizing:border-box;}
+.nwm-book .nwm-book-grid{display:flex;flex-wrap:wrap;align-items:flex-start;max-width:1140px;margin:0 auto;}
+.nwm-book .nwm-book-main{flex:1 1 560px;min-width:0;margin:0 12px 24px;}
+.nwm-book .nwm-book-side{flex:1 1 340px;min-width:0;margin:0 12px 24px;}
+.nwm-book .nwm-card{background-color:#ffffff;border-radius:20px;box-shadow:0 18px 40px rgba(31,39,77,0.18);overflow:hidden;}
+.nwm-book .nwm-card-body{padding:32px;}
+.nwm-book .nwm-book-title{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:34px;font-weight:700;line-height:1.2;color:#1F274D;}
+.nwm-book .nwm-book-lead{margin:0 0 20px;font-family:'Inter',Arial,sans-serif;font-size:16px;line-height:1.6;color:#5b6478;}
+.nwm-book .nwm-book-list{margin:0 0 24px;padding:18px 20px 8px;border-radius:14px;background-color:#F1F8FD;list-style:none;}
+.nwm-book .nwm-book-list li{display:inline-block;width:49%;vertical-align:top;position:relative;margin:0 0 10px;padding-left:28px;font-family:'Inter',Arial,sans-serif;font-size:15px;font-weight:500;line-height:1.4;color:#1c2233;}
+.nwm-book .nwm-book-list li:before{content:"\2713";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background-color:#1FA35A;color:#ffffff;font-size:11px;font-weight:700;line-height:18px;text-align:center;}
+.nwm-book .nwm-book-price{margin:0 0 20px;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:600;color:#1F274D;overflow:hidden;}
+.nwm-book .nwm-book-price strong{float:right;font-family:'Lora',Georgia,serif;font-size:32px;line-height:1;color:#0C5D9C;}
+.nwm-book .nwm-book-placeholder{padding:240px 24px;border:2px dashed #b9d9ef;border-radius:14px;background-color:#F7FBFE;color:#5b6478;font-size:15px;text-align:center;}
+.nwm-book .nwm-loc-head{padding:28px 28px 22px;text-align:center;}
+.nwm-book .nwm-loc-name{margin:0 0 8px;font-family:'Lora',Georgia,serif;font-size:24px;font-weight:700;color:#1F274D;}
+.nwm-book .nwm-loc-line{margin:0 0 4px;font-family:'Inter',Arial,sans-serif;font-size:16px;line-height:1.5;color:#1c2233;}
+.nwm-book .nwm-loc-phone{display:inline-block;margin-top:14px;padding:12px 22px;border-radius:10px;background-color:#1F274D;color:#ffffff !important;font-family:'Inter',Arial,sans-serif;font-size:16px;font-weight:600;text-decoration:none !important;}
+.nwm-book .nwm-loc-phone:hover{background-color:#0C5D9C;}
+.nwm-book .nwm-loc-map{display:block;width:100%;height:340px;border:0;}
+.nwm-book .nwm-loc-hint{margin:0;padding:14px 20px;border-top:1px solid #e6edf3;font-family:'Inter',Arial,sans-serif;font-size:14px;color:#5b6478;text-align:center;}
+@media (max-width:600px){.nwm-book{padding:0 12px 48px;}.nwm-book .nwm-book-main,.nwm-book .nwm-book-side{margin:0 0 20px;}.nwm-book .nwm-card-body{padding:24px 18px;}.nwm-book .nwm-book-title{font-size:28px;}.nwm-book .nwm-book-list li{display:block;width:100%;}.nwm-book .nwm-loc-map{height:260px;}}
 </style>
-
-<section class="nwm-book" id="nwm-book">
-  <div class="nwm-book__grid">
-
-    <!-- Calendar card -->
-    <div class="nwm-card">
-      <div class="nwm-card__body">
-        <h2 class="nwm-book__title">Book Your Appointment</h2>
-        <p class="nwm-book__lead">Pick a day and time that works for you. Your visit includes:</p>
-        <ul class="nwm-book__list">
-          <li>Consultation</li>
-          <li>Full Examination</li>
-          <li>Digital X-Rays (if needed)</li>
-          <li>MRI Review</li>
-          <li>Doctor's Report of Findings</li>
-          <li>1 Full Decompression Session</li>
-        </ul>
-        <p class="nwm-book__price">Your special price <strong>$49</strong></p>
-
-        <div class="nwm-book__calendar">
-          <!-- ===== CALENDAR PLACEHOLDER: delete this div and paste your GHL calendar embed code here ===== -->
-          <div class="nwm-book__placeholder">Your GHL calendar embed goes here</div>
-          <!-- ===== END CALENDAR PLACEHOLDER ===== -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Location card -->
-    <div class="nwm-card">
-      <div class="nwm-loc__head">
-        <h3 class="nwm-loc__name">NewWave Medical</h3>
-        <p class="nwm-loc__line">13039 Summerfield Square Drive</p>
-        <p class="nwm-loc__line">Riverview, FL 33578</p>
-        <a class="nwm-loc__phone" href="tel:+18135749206">Call (813) 574-9206</a>
-      </div>
-      <iframe
-        class="nwm-loc__map"
-        title="Map to NewWave Medical"
-        src="https://www.google.com/maps?q=13039+Summerfield+Square+Drive,+Riverview,+FL+33578&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <p class="nwm-loc__hint">Prefer to talk first? Give us a call and we'll help you pick a time.</p>
-    </div>
-
-  </div>
-</section>
+<div class="nwm-book" id="nwm-book">
+<div class="nwm-book-grid">
+<div class="nwm-book-main">
+<div class="nwm-card">
+<div class="nwm-card-body">
+<h2 class="nwm-book-title">Book Your Appointment</h2>
+<p class="nwm-book-lead">Pick a day and time that works for you. Your visit includes:</p>
+<ul class="nwm-book-list">
+<li>Consultation</li>
+<li>Full Examination</li>
+<li>Digital X-Rays (if needed)</li>
+<li>MRI Review</li>
+<li>Doctor's Report of Findings</li>
+<li>1 Full Decompression Session</li>
+</ul>
+<p class="nwm-book-price">Your special price <strong>$49</strong></p>
+<div class="nwm-book-calendar">
+<div class="nwm-book-placeholder">CALENDAR PLACEHOLDER: replace this line with your GHL calendar embed code</div>
+</div>
+</div>
+</div>
+</div>
+<div class="nwm-book-side">
+<div class="nwm-card">
+<div class="nwm-loc-head">
+<h3 class="nwm-loc-name">NewWave Medical</h3>
+<p class="nwm-loc-line">13039 Summerfield Square Drive</p>
+<p class="nwm-loc-line">Riverview, FL 33578</p>
+<a class="nwm-loc-phone" href="tel:+18135749206">Call (813) 574-9206</a>
+</div>
+<iframe class="nwm-loc-map" title="Map to NewWave Medical" src="https://www.google.com/maps?q=13039+Summerfield+Square+Drive,+Riverview,+FL+33578&output=embed" loading="lazy"></iframe>
+<p class="nwm-loc-hint">Prefer to talk first? Give us a call and we'll help you pick a time.</p>
+</div>
+</div>
+</div>
+</div>

@@ -1,121 +1,28 @@
-<!-- ============================================================
-     SECTION 4 — VIDEO
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-
-     >>> Replace the VIDEO PLACEHOLDER below with your video embed
-         (YouTube/Vimeo <iframe>, or a <video> tag). It will
-         automatically fill the 16:9 frame.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-vid {
-    --nwm-blue: #009CE7;
-    --nwm-navy: #1F274D;
-    --nwm-yellow: #FDBE0B;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 72px 20px;
-    background:
-      radial-gradient(900px 360px at 50% 110%, rgba(60, 202, 243, .5), transparent 70%),
-      var(--nwm-blue);
-    color: #fff;
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  .nwm-vid *, .nwm-vid *::before, .nwm-vid *::after { box-sizing: border-box; }
-  .nwm-vid__inner { max-width: 900px; margin: 0 auto; }
-  .nwm-vid__title {
-    margin: 0 0 12px;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(30px, 4.4vw, 44px);
-    font-weight: 700;
-    line-height: 1.15;
-    color: #fff;
-  }
-  .nwm-vid__sub {
-    max-width: 620px;
-    margin: 0 auto 32px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, .95);
-  }
-  .nwm-vid__frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: 6px solid #fff;
-    border-radius: 20px;
-    background: var(--nwm-navy);
-    box-shadow: 0 22px 50px rgba(31, 39, 77, .35);
-    overflow: hidden;
-  }
-  .nwm-vid__frame iframe,
-  .nwm-vid__frame video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  /* Placeholder shown until the real video is pasted in */
-  .nwm-vid__placeholder {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    color: rgba(255, 255, 255, .75);
-    font-size: 15px;
-  }
-  .nwm-vid__play {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--nwm-yellow) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231F274D'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") 55% 50% / 32px no-repeat;
-  }
-  .nwm-vid__cta { margin-top: 40px; }
-  .nwm-btn {
-    display: inline-block;
-    padding: 18px 34px;
-    border-radius: 12px;
-    background: var(--nwm-yellow);
-    color: var(--nwm-navy) !important;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: 0 10px 24px rgba(31, 39, 77, .28);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .nwm-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(31, 39, 77, .34); }
-  @media (max-width: 600px) {
-    .nwm-vid { padding: 52px 16px; }
-    .nwm-vid__sub { font-size: 17px; }
-    .nwm-vid__frame { border-width: 4px; border-radius: 14px; }
-    .nwm-btn { display: block; width: 100%; padding: 17px 16px; font-size: 16px; }
-  }
+.nwm-vid{box-sizing:border-box;width:100%;padding:72px 20px;background-color:#009CE7;color:#ffffff;text-align:center;font-family:'Inter',Arial,sans-serif;}
+.nwm-vid *{box-sizing:border-box;}
+.nwm-vid .nwm-vid-inner{max-width:900px;margin:0 auto;}
+.nwm-vid .nwm-vid-title{margin:0 0 12px;font-family:'Lora',Georgia,serif;font-size:44px;font-weight:700;line-height:1.15;color:#ffffff;}
+.nwm-vid .nwm-vid-sub{max-width:620px;margin:0 auto 32px;font-family:'Inter',Arial,sans-serif;font-size:18px;line-height:1.6;color:#ffffff;}
+.nwm-vid .nwm-vid-frame{position:relative;width:100%;height:0;padding-bottom:56.25%;border:6px solid #ffffff;border-radius:20px;background-color:#1F274D;box-shadow:0 22px 50px rgba(31,39,77,0.35);overflow:hidden;}
+.nwm-vid .nwm-vid-frame iframe,.nwm-vid .nwm-vid-frame video{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+.nwm-vid .nwm-vid-placeholder{position:absolute;top:50%;left:0;width:100%;margin-top:-50px;text-align:center;font-family:'Inter',Arial,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);}
+.nwm-vid .nwm-vid-play{display:block;position:relative;width:72px;height:72px;margin:0 auto 14px;border-radius:50%;background-color:#FDBE0B;}
+.nwm-vid .nwm-vid-play:after{content:"";position:absolute;top:22px;left:28px;width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid #1F274D;}
+.nwm-vid .nwm-vid-cta{margin-top:40px;}
+.nwm-vid .nwm-btn{display:inline-block;padding:18px 34px;border-radius:12px;background-color:#FDBE0B;color:#1F274D !important;font-family:'Inter',Arial,sans-serif;font-size:18px;font-weight:700;text-decoration:none !important;box-shadow:0 10px 24px rgba(31,39,77,0.28);}
+.nwm-vid .nwm-btn:hover{background-color:#FFCB33;}
+@media (max-width:900px){.nwm-vid .nwm-vid-title{font-size:38px;}}
+@media (max-width:600px){.nwm-vid{padding:52px 16px;}.nwm-vid .nwm-vid-title{font-size:30px;}.nwm-vid .nwm-vid-sub{font-size:17px;}.nwm-vid .nwm-vid-frame{border-width:4px;border-radius:14px;}.nwm-vid .nwm-btn{display:block;width:100%;padding:17px 16px;font-size:16px;}}
 </style>
-
-<section class="nwm-vid">
-  <div class="nwm-vid__inner">
-    <h2 class="nwm-vid__title">See Spinal Decompression in Action</h2>
-    <p class="nwm-vid__sub">Watch a real treatment session so you know exactly what to expect when you come in.</p>
-
-    <div class="nwm-vid__frame">
-      <!-- ===== VIDEO PLACEHOLDER: delete this div and paste your video embed here ===== -->
-      <div class="nwm-vid__placeholder">
-        <span class="nwm-vid__play" aria-hidden="true"></span>
-        Video coming soon
-      </div>
-      <!-- ===== END VIDEO PLACEHOLDER ===== -->
-    </div>
-
-    <div class="nwm-vid__cta">
-      <a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a>
-    </div>
-  </div>
-</section>
+<div class="nwm-vid">
+<div class="nwm-vid-inner">
+<h2 class="nwm-vid-title">See Spinal Decompression in Action</h2>
+<p class="nwm-vid-sub">Watch a real treatment session so you know exactly what to expect when you come in.</p>
+<div class="nwm-vid-frame">
+<div class="nwm-vid-placeholder"><span class="nwm-vid-play"></span>VIDEO PLACEHOLDER: replace this line with your video embed</div>
+</div>
+<div class="nwm-vid-cta"><a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a></div>
+</div>
+</div>

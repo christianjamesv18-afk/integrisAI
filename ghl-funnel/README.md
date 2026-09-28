@@ -22,8 +22,12 @@ For each file, in order:
 
 ## Three things to fill in
 
-1. **Calendar** (`02-booking.html`): find the comment `CALENDAR PLACEHOLDER`. Delete the `<div class="nwm-book__placeholder">` line under it and paste your GHL calendar embed code there. You get the embed code from Calendars → Calendar Settings → your calendar → **Embed Code**.
-2. **Video** (`04-video.html`): find `VIDEO PLACEHOLDER`, delete the placeholder `<div>` block and paste your YouTube, Vimeo or `<video>` embed. It fills the 16:9 frame on its own.
+1. **Calendar** (`02-booking.html`): find the line that says `CALENDAR PLACEHOLDER`. Replace that whole `<div class="nwm-book-placeholder">...</div>` line with your GHL calendar embed code. You get the embed code from Calendars → Calendar Settings → your calendar → **Embed Code**.
+2. **Video** (`04-video.html`): find the line that says `VIDEO PLACEHOLDER`. Replace that whole `<div class="nwm-vid-placeholder">...</div>` line with your YouTube, Vimeo or `<video>` embed. It fills the 16:9 frame on its own.
 3. **Privacy Policy link** (`05-footer.html`): change `href="#"` to your policy page URL.
+
+## If the page shows CSS as plain text
+
+That means GHL didn't apply the `<style>` block. Check that each file went into a **Custom JS/HTML** element (not a Text or Paragraph element), that you pasted the **whole** file from the first line to the last, and that you clicked **Save** in the code editor.
 
 All the "Book / Claim" buttons scroll to the booking section (`#nwm-book`), so keep section 2 on the same page.

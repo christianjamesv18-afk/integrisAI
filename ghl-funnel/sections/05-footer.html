@@ -1,57 +1,22 @@
-<!-- ============================================================
-     SECTION 5 — FOOTER
-     Paste into a GHL "Custom JS/HTML" element.
-     Section settings: full width, padding 0.
-
-     >>> Update the Privacy Policy link href to your policy page.
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  .nwm-foot {
-    --nwm-footer: #252C37;
-    --nwm-cyan: #3CCAF3;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 44px 20px 40px;
-    background: var(--nwm-footer);
-    color: rgba(255, 255, 255, .8);
-    text-align: center;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  .nwm-foot *, .nwm-foot *::before, .nwm-foot *::after { box-sizing: border-box; }
-  .nwm-foot__inner { max-width: 760px; margin: 0 auto; }
-  .nwm-foot__name { margin: 0 0 6px; font-size: 18px; font-weight: 700; color: #fff; }
-  .nwm-foot p { margin: 0; }
-  .nwm-foot a { color: var(--nwm-cyan) !important; text-decoration: none !important; }
-  .nwm-foot a:hover { text-decoration: underline !important; }
-  .nwm-foot__sep { margin: 0 8px; opacity: .5; }
-  .nwm-foot__disclaimer {
-    margin: 22px auto 18px !important;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, .12);
-    font-size: 13px;
-    color: rgba(255, 255, 255, .6);
-  }
-  .nwm-foot__legal { font-size: 13px; color: rgba(255, 255, 255, .6); }
-  @media (max-width: 600px) {
-    .nwm-foot { padding: 36px 16px 32px; font-size: 14px; }
-    .nwm-foot__sep { display: none; }
-    .nwm-foot__addr, .nwm-foot__tel, .nwm-foot__legal a { display: block; }
-  }
+.nwm-foot{box-sizing:border-box;width:100%;padding:44px 20px 40px;background-color:#252C37;color:rgba(255,255,255,0.8);text-align:center;font-family:'Inter',Arial,sans-serif;font-size:15px;line-height:1.7;}
+.nwm-foot *{box-sizing:border-box;}
+.nwm-foot .nwm-foot-inner{max-width:760px;margin:0 auto;}
+.nwm-foot p{margin:0;font-family:'Inter',Arial,sans-serif;color:rgba(255,255,255,0.8);}
+.nwm-foot .nwm-foot-name{margin:0 0 6px;font-size:18px;font-weight:700;color:#ffffff;}
+.nwm-foot a{color:#3CCAF3 !important;text-decoration:none !important;}
+.nwm-foot a:hover{text-decoration:underline !important;}
+.nwm-foot .nwm-foot-sep{margin:0 8px;opacity:0.5;}
+.nwm-foot .nwm-foot-disclaimer{margin:22px auto 18px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.12);font-size:13px;color:rgba(255,255,255,0.6);}
+.nwm-foot .nwm-foot-legal{font-size:13px;color:rgba(255,255,255,0.6);}
+@media (max-width:600px){.nwm-foot{padding:36px 16px 32px;font-size:14px;}.nwm-foot .nwm-foot-sep{display:none;}.nwm-foot .nwm-foot-addr,.nwm-foot .nwm-foot-tel,.nwm-foot .nwm-foot-legal a{display:block;}}
 </style>
-
-<footer class="nwm-foot">
-  <div class="nwm-foot__inner">
-    <p class="nwm-foot__name">NewWave Medical</p>
-    <p>
-      <span class="nwm-foot__addr">13039 Summerfield Square Drive, Riverview, FL 33578</span><span class="nwm-foot__sep">|</span><a class="nwm-foot__tel" href="tel:+18135749206">(813) 574-9206</a>
-    </p>
-    <p class="nwm-foot__disclaimer">Disclaimer: Medicare is not accepted and federal insurance rules apply.</p>
-    <p class="nwm-foot__legal">
-      &copy; 2026 NewWave Medical. All Rights Reserved.<span class="nwm-foot__sep">|</span><a href="#">Privacy Policy</a>
-    </p>
-  </div>
-</footer>
+<div class="nwm-foot">
+<div class="nwm-foot-inner">
+<p class="nwm-foot-name">NewWave Medical</p>
+<p><span class="nwm-foot-addr">13039 Summerfield Square Drive, Riverview, FL 33578</span><span class="nwm-foot-sep">|</span><a class="nwm-foot-tel" href="tel:+18135749206">(813) 574-9206</a></p>
+<p class="nwm-foot-disclaimer">Disclaimer: Medicare is not accepted and federal insurance rules apply.</p>
+<p class="nwm-foot-legal">&copy; 2026 NewWave Medical. All Rights Reserved.<span class="nwm-foot-sep">|</span><a href="#">Privacy Policy</a></p>
+</div>
+</div>
