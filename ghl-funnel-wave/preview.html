@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Wave Therapy Funnel Preview</title>
 <style>html{scroll-behavior:smooth}body{margin:0;background:#009CE7}</style></head><body>
-<!-- Preview uses section 2 (booking + location). 02b is an alternative to 2. -->
 <script>(function(d){if(d.className.indexOf('nwm-js')<0&&('IntersectionObserver' in window)&&!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){d.className+=' nwm-js';setTimeout(function(){d.className+=' nwm-anim-fallback';},3000);}})(document.documentElement);</script>
 <style>
 html,body{overflow-x:hidden;}
@@ -274,6 +273,7 @@ html,body{overflow-x:hidden;}
 .nwm-vid .nwm-vid-sub{max-width:620px;margin:0 auto 32px;font-family:'Inter',Arial,sans-serif;font-size:18px;line-height:1.6;color:#ffffff;}
 .nwm-vid .nwm-vid-frame{position:relative;width:100%;height:0;padding-bottom:56.25%;border:6px solid #ffffff;border-radius:20px;background-color:#1F274D;box-shadow:0 22px 50px rgba(31,39,77,0.35);overflow:hidden;}
 .nwm-vid .nwm-vid-frame iframe,.nwm-vid .nwm-vid-frame video{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+.nwm-vid .nwm-vid-frame video{object-fit:contain;background-color:#000000;}
 .nwm-vid .nwm-vid-placeholder{position:absolute;top:50%;left:0;width:100%;margin-top:-50px;text-align:center;font-family:'Inter',Arial,sans-serif;font-size:15px;color:rgba(255,255,255,0.75);}
 .nwm-vid .nwm-vid-play{display:block;position:relative;width:72px;height:72px;margin:0 auto 14px;border-radius:50%;background-color:#FDBE0B;}
 .nwm-vid .nwm-vid-play:after{content:"";position:absolute;top:22px;left:28px;width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid #1F274D;}
@@ -305,7 +305,7 @@ html.nwm-anim-off .nwm-anim,html.nwm-anim-off .nwm-anim .nwm-w{opacity:1 !import
 <h2 class="nwm-vid-title nwm-anim nwm-split">See Wave Therapy in Action</h2>
 <p class="nwm-vid-sub nwm-anim" data-nwm-delay="300">Watch a real treatment session so you know exactly what to expect when you come in.</p>
 <div class="nwm-vid-frame nwm-anim nwm-a-pop" data-nwm-delay="150">
-<div class="nwm-vid-placeholder"><span class="nwm-vid-play"></span>VIDEO PLACEHOLDER: replace this line with your video embed</div>
+<video controls playsinline preload="metadata" title="Wave Therapy treatment"><source src="https://assets.cdn.filesafe.space/w9bkdVlL3AhVRBWJtXt1/media/6aba895072844d8ecf21cfcc.mov#t=0.1" type="video/quicktime"><source src="https://assets.cdn.filesafe.space/w9bkdVlL3AhVRBWJtXt1/media/6aba895072844d8ecf21cfcc.mov#t=0.1" type="video/mp4">Your browser can't play this video.</video>
 </div>
 <p class="nwm-vid-note nwm-anim">Treatments are performed with the PiezoWave&sup2; system.</p>
 <div class="nwm-vid-cta nwm-anim"><a class="nwm-btn" href="#nwm-book">Book My $49 Visit &rarr;</a></div>
